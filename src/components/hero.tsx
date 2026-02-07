@@ -17,6 +17,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/40 to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(214,40,40,0.25),_transparent_60%)]" />
       </div>
+
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6">
         <div className="flex max-w-3xl flex-col gap-6">
           <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
@@ -38,13 +39,17 @@ export function Hero() {
               View Schedule
             </Link>
           </div>
+
           <div className="grid gap-6 sm:grid-cols-3">
             {[
               { label: "Years Coaching", value: "12+" },
               { label: "Weekly Classes", value: "40" },
               { label: "Athletes Trained", value: "500+" },
             ].map((stat) => (
-              <div key={stat.label} className="rounded-2xl border border-ink/10 bg-fog/70 p-4">
+              <div
+                key={stat.label}
+                className="rounded-2xl border border-ink/10 bg-fog/70 p-4"
+              >
                 <p className="text-2xl font-display uppercase text-ink">
                   {stat.value}
                 </p>

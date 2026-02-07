@@ -250,6 +250,16 @@ export const faqs = [
     answer:
       "Yes. Drop-ins are available for $29 and apply toward any membership upgrade.",
   },
+  {
+    question: "What ages do you train?",
+    answer:
+      "We coach youth athletes and adults. Youth programs are designed for ages 10-16.",
+  },
+  {
+    question: "How do I book a trial?",
+    answer:
+      "Use the Book a Free Trial button and we will confirm your first session by email.",
+  },
 ];
 
 export const blogPosts = [

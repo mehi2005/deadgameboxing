@@ -6,6 +6,7 @@ type SectionProps = {
   description?: string;
   children?: ReactNode;
   className?: string;
+  contentClassName?: string;
 };
 
 export function Section({
@@ -15,10 +16,15 @@ export function Section({
   description,
   children,
   className,
+  contentClassName,
 }: SectionProps) {
   return (
     <section id={id} className={`py-20 ${className ?? ""}`.trim()}>
-      <div className="mx-auto w-full max-w-6xl px-6">
+      <div
+        className={`mx-auto w-full max-w-6xl px-6 ${
+          contentClassName ?? ""
+        }`.trim()}
+      >
         <div className="flex flex-col gap-4">
           {eyebrow ? (
             <span className="text-xs uppercase tracking-[0.35em] text-ember">
