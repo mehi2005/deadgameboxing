@@ -76,7 +76,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="relative pb-20">
+          <div className="relative pb-0 sm:pb-20">
             <div className="relative h-[400px] overflow-hidden rounded-md border border-ink/10">
               <Image
                 src="/images/facility.svg"
@@ -86,7 +86,7 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-12 left-6 h-[240px] w-[170px] overflow-hidden rounded-md border border-ink/10 shadow-2xl sm:left-10 sm:h-[260px] sm:w-[190px]">
+            <div className="relative mx-auto mt-6 h-[220px] w-[200px] overflow-hidden rounded-md border border-ink/10 shadow-2xl sm:absolute sm:-bottom-12 sm:left-6 sm:mx-0 sm:mt-0 sm:h-[260px] sm:w-[190px]">
               <Image
                 src="/images/teamphoto2.webp"
                 alt="DeadGame Boxing team"

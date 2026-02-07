@@ -32,7 +32,7 @@ export function ScheduleFilter({
             key={program}
             type="button"
             onClick={() => setSelected(program)}
-            className={`rounded-full border px-4 py-2 text-xs uppercase tracking-[0.3em] transition ${
+            className={`rounded-full border px-3 py-2 text-[10px] uppercase tracking-[0.3em] transition sm:px-4 sm:text-xs ${
               selected === program
                 ? "border-ember bg-ember/20 text-ink"
                 : "border-ink/10 text-sand/60 hover:border-ink/30"

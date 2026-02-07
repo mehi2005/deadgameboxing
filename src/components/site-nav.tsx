@@ -38,7 +38,7 @@ export function SiteNav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition hover:text-ink ${
+                className={`transition-transform duration-200 hover:text-ink hover:scale-105 ${
                   isActive ? "text-ink" : ""
                 }`}
               >
