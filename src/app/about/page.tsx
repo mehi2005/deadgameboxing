@@ -21,13 +21,13 @@ const trainers = [
 export default function AboutPage() {
   return (
     <>
-      <section className="border-b border-white/10 bg-black/70 py-20">
+      <section className="border-b border-ink/10 bg-fog/80 py-20">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6">
             <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
               About
             </p>
-            <h1 className="text-5xl font-display uppercase tracking-wide text-white">
+            <h1 className="text-5xl font-display uppercase tracking-wide text-ink">
               Dead Game Boxing
             </h1>
             <p className="text-xl text-sand/80">
@@ -53,7 +53,7 @@ export default function AboutPage() {
               />
             </div>
           </div>
-          <div className="relative h-[380px] overflow-hidden rounded-[2.5rem] border border-white/10">
+          <div className="relative h-[380px] overflow-hidden rounded-[2.5rem] border border-ink/10">
             <Image
               src="/images/about-gym.svg"
               alt="DeadGame Boxing culture"
@@ -70,7 +70,7 @@ export default function AboutPage() {
           {offerings.map((item) => (
             <div
               key={item}
-              className="rounded-2xl border border-white/10 bg-black/50 px-5 py-4 text-xs uppercase tracking-[0.3em] text-sand/70"
+              className="rounded-2xl border border-ink/10 bg-fog/80 px-5 py-4 text-xs uppercase tracking-[0.3em] text-sand/70"
             >
               {item}
             </div>
@@ -81,14 +81,14 @@ export default function AboutPage() {
       <Section
         title="Location"
         description="Train in Cedar Park with easy access for the greater Austin area."
-        className="bg-black/60"
+        className="bg-fog/80"
       >
         <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div className="grid gap-3 text-lg text-sand">
             <p>600 S Bell Blvd Ste 207, Cedar Park, TX</p>
             <p className="text-sand/70">(512) 215-9086</p>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-black/50 p-6 text-sm text-sand/70">
+          <div className="rounded-3xl border border-ink/10 bg-fog/80 p-6 text-sm text-sand/70">
             <p>
               Parking is available on site. Bring wraps and water, or grab what
               you need at the front desk.
@@ -105,7 +105,7 @@ export default function AboutPage() {
           {trainers.map((trainer) => (
             <div
               key={trainer.name}
-              className="rounded-3xl border border-white/10 bg-black/60 p-6"
+              className="rounded-3xl border border-ink/10 bg-fog/80 p-6"
             >
               <p className="text-2xl font-display uppercase tracking-wide text-sand">
                 {trainer.name}

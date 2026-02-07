@@ -25,7 +25,7 @@ export default function BlogPostPage({ params }: PageProps) {
         title={post.title}
         description={post.date}
       >
-        <div className="rounded-3xl border border-white/10 bg-black/60 p-8 text-sm text-sand/70">
+        <div className="rounded-3xl border border-ink/10 bg-fog/80 p-8 text-sm text-sand/70">
           <div className="flex flex-col gap-5">
             {post.content.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>

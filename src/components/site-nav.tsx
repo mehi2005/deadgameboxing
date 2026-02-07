@@ -12,7 +12,7 @@ export function SiteNav() {
   const { open } = useTrialModal();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-black/70 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-ink/10 bg-fog/80 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ember/60 text-xs font-semibold uppercase tracking-[0.3em] text-ember">
@@ -38,8 +38,8 @@ export function SiteNav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition hover:text-white ${
-                  isActive ? "text-white" : ""
+                className={`transition hover:text-ink ${
+                  isActive ? "text-ink" : ""
                 }`}
               >
                 {link.label}
@@ -56,7 +56,7 @@ export function SiteNav() {
           type="button"
           aria-label="Toggle menu"
           aria-expanded={isOpen}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-sand lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 text-sand lg:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <span className="text-lg">{isOpen ? "×" : "≡"}</span>
@@ -64,7 +64,7 @@ export function SiteNav() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-white/10 bg-black/90 lg:hidden">
+        <div className="border-t border-ink/10 bg-fog/90 lg:hidden">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-6 text-sm uppercase tracking-[0.25em] text-sand/70">
             {navLinks.map((link) => {
               const isActive =
@@ -76,8 +76,8 @@ export function SiteNav() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`transition hover:text-white ${
-                    isActive ? "text-white" : ""
+                  className={`transition hover:text-ink ${
+                    isActive ? "text-ink" : ""
                   }`}
                 >
                   {link.label}

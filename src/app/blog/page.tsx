@@ -16,7 +16,7 @@ export default function BlogPage() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="rounded-3xl border border-white/10 bg-black/60 p-6 transition hover:border-ember/40"
+              className="rounded-3xl border border-ink/10 bg-fog/80 p-6 transition hover:border-ember/40"
             >
               <p className="text-xs uppercase tracking-[0.3em] text-ember/80">
                 {post.category}

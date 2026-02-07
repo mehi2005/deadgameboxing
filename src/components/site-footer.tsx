@@ -8,7 +8,7 @@ export function SiteFooter() {
   );
 
   return (
-    <footer className="border-t border-white/10 bg-black/90">
+    <footer className="border-t border-ink/10 bg-fog/90">
       <div className="mx-auto w-full max-w-6xl px-6 py-16">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
           <div className="flex flex-col gap-4">
@@ -55,7 +55,7 @@ export function SiteFooter() {
               Quick Links
             </p>
             {footerLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="hover:text-white">
+              <Link key={link.href} href={link.href} className="hover:text-ink">
                 {link.label}
               </Link>
             ))}
@@ -72,7 +72,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs uppercase tracking-[0.35em] text-sand/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-3 border-t border-ink/10 pt-6 text-xs uppercase tracking-[0.35em] text-sand/50 sm:flex-row sm:items-center sm:justify-between">
           <span>© 2026 DEAD GAME BOXING</span>
           <span>TRAIN HARD. STAY SHARP.</span>
         </div>

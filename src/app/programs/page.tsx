@@ -7,13 +7,13 @@ import { programs } from "@/lib/data";
 export default function ProgramsPage() {
   return (
     <>
-      <section className="border-b border-white/10 bg-black/70 py-20">
+      <section className="border-b border-ink/10 bg-fog/80 py-20">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6">
             <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
               Programs
             </p>
-            <h1 className="text-5xl font-display uppercase tracking-wide text-white">
+            <h1 className="text-5xl font-display uppercase tracking-wide text-ink">
               Every Round Has a Purpose
             </h1>
             <p className="text-base text-sand/70">
@@ -21,7 +21,7 @@ export default function ProgramsPage() {
               competition prep, and performance conditioning.
             </p>
           </div>
-          <div className="relative h-[340px] overflow-hidden rounded-[2.5rem] border border-white/10">
+          <div className="relative h-[340px] overflow-hidden rounded-[2.5rem] border border-ink/10">
             <Image
               src="/images/programs-hero.svg"
               alt="Boxing training programs"

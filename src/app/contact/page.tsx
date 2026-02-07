@@ -12,7 +12,7 @@ export default function ContactPage() {
         description="Send us a note, ask about a program, or book a free trial session."
       >
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
-          <div className="flex flex-col gap-6 rounded-3xl border border-white/10 bg-black/60 p-8 text-sm text-sand/70">
+          <div className="flex flex-col gap-6 rounded-3xl border border-ink/10 bg-fog/80 p-8 text-sm text-sand/70">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-ember/80">
                 Gym Location

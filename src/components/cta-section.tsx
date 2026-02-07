@@ -8,7 +8,7 @@ export function CTASection() {
           <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
             Ready to Train
           </p>
-          <h3 className="mt-4 text-4xl font-display uppercase tracking-wide text-white">
+          <h3 className="mt-4 text-4xl font-display uppercase tracking-wide text-ink">
             Start Your First Round With Us
           </h3>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-sand/80">
