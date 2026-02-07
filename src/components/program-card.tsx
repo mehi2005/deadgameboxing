@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { programs } from "@/lib/data";
 
 type Program = (typeof programs)[number];
@@ -14,15 +13,6 @@ export function ProgramCard({ program }: { program: Program }) {
           <h3 className="mt-2 text-2xl font-display uppercase tracking-wide text-sand">
             {program.title}
           </h3>
-        </div>
-        <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-ink/10 bg-fog/60">
-          <Image
-            src={program.image}
-            alt={program.title}
-            fill
-            sizes="56px"
-            className="object-cover"
-          />
         </div>
       </div>
       <p className="mt-4 text-sm text-sand/70">{program.description}</p>
