@@ -33,12 +33,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${bebasNeue.variable} ${spaceGrotesk.variable} antialiased bg-white text-ink`}
       >
         <TrialModalProvider>
-          <div className="min-h-screen bg-grid">
+          <div className="min-h-screen bg-white bg-grid">
             <SiteNav />
-            <main>{children}</main>
+            <main className="bg-transparent">{children}</main>
             <SiteFooter />
           </div>
         </TrialModalProvider>

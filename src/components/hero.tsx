@@ -4,7 +4,7 @@ import { BookTrialButton } from "@/components/trial-modal-context";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-ink/10 bg-[radial-gradient(circle_at_top,_rgba(214,40,40,0.25),_transparent_55%)] py-20">
+    <section className="relative overflow-hidden border-b border-ink/10 bg-[radial-gradient(circle_at_top,_rgba(139,26,26,0.2),_transparent_55%)] py-20">
       <div className="mx-auto grid w-full max-w-6xl gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="flex flex-col gap-6">
           <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
