@@ -37,7 +37,7 @@ export default function Home() {
           </div>
           <div className="relative h-[520px] w-full max-w-[360px] place-self-center overflow-hidden rounded-md border border-ink/10">
             <Image
-              src="/images/teamphoto1.png"
+              src="/images/teamphoto1.webp"
               alt="DeadGame Boxing team training"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
@@ -88,7 +88,7 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-12 left-6 h-[240px] w-[170px] overflow-hidden rounded-md border border-ink/10 shadow-2xl sm:left-10 sm:h-[260px] sm:w-[190px]">
               <Image
-                src="/images/teamphoto2.png"
+                src="/images/teamphoto2.webp"
                 alt="DeadGame Boxing team"
                 fill
                 sizes="(max-width: 1024px) 60vw, 20vw"
@@ -106,7 +106,7 @@ export default function Home() {
       >
         <div className="relative h-[420px] w-full max-w-[420px] place-self-center overflow-hidden rounded-md border border-ink/10">
           <Image
-            src="/images/teamphoto3.png"
+            src="/images/teamphoto3.webp"
             alt="DeadGame Boxing team session"
             fill
             sizes="(max-width: 1024px) 100vw, 80vw"
@@ -140,7 +140,7 @@ export default function Home() {
           </div>
           <div className="relative h-[520px] w-full max-w-[360px] place-self-center overflow-hidden rounded-md border border-ink/10">
             <Image
-              src="/images/teamphoto4.png"
+              src="/images/teamphoto4.webp"
               alt="DeadGame Boxing training floor"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"

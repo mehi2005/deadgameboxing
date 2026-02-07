@@ -45,7 +45,7 @@ export function Hero() {
         </div>
         <div className="relative h-[420px] w-full overflow-hidden rounded-[2.5rem] border border-ink/10 bg-fog/80 shadow-2xl backdrop-blur-sm">
           <Image
-            src="/images/hero-boxer.png"
+            src="/images/hero-boxer.webp"
             alt="DeadGame Boxing training"
             fill
             sizes="(max-width: 1024px) 100vw, 40vw"
