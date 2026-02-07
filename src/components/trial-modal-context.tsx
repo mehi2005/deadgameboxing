@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   createContext,
   useCallback,
@@ -122,6 +123,13 @@ function TrialModal({
             </h3>
             <p className="mt-2 text-sm text-sand/70">
               Tell us what you want to train and we will confirm your spot.
+            </p>
+            <p className="mt-2 text-sm text-ember/90">
+              Please complete the{" "}
+              <Link href="/waiver" className="underline underline-offset-4">
+                waiver
+              </Link>{" "}
+              before arriving.
             </p>
           </div>
           <button

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/cta-section";
 import { CoachCard } from "@/components/coach-card";
@@ -8,6 +7,7 @@ import { Hero } from "@/components/hero";
 import { InstagramEmbed } from "@/components/instagram-embed";
 import { SchedulePhoto } from "@/components/schedule-photo";
 import { ProgramCard } from "@/components/program-card";
+import { RotatingImage } from "@/components/rotating-image";
 import { ScheduleTable } from "@/components/schedule-table";
 import { Section } from "@/components/section";
 import { TestimonialCard } from "@/components/testimonial-card";
@@ -39,13 +39,17 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="relative h-[520px] w-full max-w-[360px] place-self-center overflow-hidden rounded-md border border-ink/10">
-            <Image
-              src="/images/teamphoto1.webp"
+          <div className="relative h-[520px] w-full max-w-[360px] place-self-center overflow-hidden rounded-md border border-ink/10 lg:h-[624px] lg:max-w-[432px]">
+            <RotatingImage
+              images={[
+                "/images/teamphoto1.webp",
+                "/images/teamphoto10.webp",
+                "/images/teamphoto11.webp",
+              ]}
               alt="DeadGame Boxing team training"
-              fill
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover object-top"
+              intervalMs={5000}
             />
           </div>
         </div>
@@ -92,16 +96,7 @@ export default function Home() {
         title="Meet the Crew"
         description="Our coaching team blends competitive experience with a tactical, data-driven approach."
       >
-        <div className="relative h-[420px] w-full max-w-[420px] place-self-center overflow-hidden rounded-md border border-ink/10">
-          <Image
-            src="/images/teamphoto3.webp"
-            alt="DeadGame Boxing team session"
-            fill
-            sizes="(max-width: 1024px) 100vw, 80vw"
-            className="object-cover object-top"
-          />
-        </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {coaches.map((coach) => (
             <CoachCard key={coach.name} coach={coach} />
           ))}

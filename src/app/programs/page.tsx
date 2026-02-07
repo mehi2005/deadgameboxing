@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CTASection } from "@/components/cta-section";
 import { ProgramCard } from "@/components/program-card";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { Section } from "@/components/section";
 import { programs } from "@/lib/data";
 
@@ -21,15 +22,18 @@ export default function ProgramsPage() {
               competition prep, and performance conditioning.
             </p>
           </div>
-          <div className="relative h-[340px] overflow-hidden rounded-[2.5rem] border border-ink/10">
+          <ScrollReveal
+            from="right"
+            className="relative h-[380px] overflow-hidden border border-ink/10"
+          >
             <Image
-              src="/images/programs-hero.svg"
-              alt="Boxing training programs"
+              src="/images/teamphoto2.webp"
+              alt="DeadGame Boxing training session"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover"
+              className="object-cover object-top scale-105"
             />
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
