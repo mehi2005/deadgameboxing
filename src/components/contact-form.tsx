@@ -7,7 +7,7 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-3xl border border-white/10 bg-black/60 p-8 text-center">
+      <div className="rounded-3xl border border-ink/10 bg-fog/80 p-8 text-center">
         <p className="text-xs uppercase tracking-[0.35em] text-ember">
           Message received
         </p>
@@ -19,7 +19,7 @@ export function ContactForm() {
         </p>
         <button
           type="button"
-          className="mt-6 rounded-full border border-white/20 px-6 py-3 text-xs uppercase tracking-[0.3em] text-sand/70"
+          className="mt-6 rounded-full border border-ink/20 px-6 py-3 text-xs uppercase tracking-[0.3em] text-sand/70"
           onClick={() => setSubmitted(false)}
         >
           Send another
@@ -30,7 +30,7 @@ export function ContactForm() {
 
   return (
     <form
-      className="grid gap-5 rounded-3xl border border-white/10 bg-black/60 p-8"
+      className="grid gap-5 rounded-3xl border border-ink/10 bg-fog/80 p-8"
       onSubmit={(event) => {
         event.preventDefault();
         setSubmitted(true);
@@ -44,7 +44,7 @@ export function ContactForm() {
           <input
             required
             name="name"
-            className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition focus:border-ember"
+            className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
             placeholder="Jordan Hayes"
           />
         </div>
@@ -56,7 +56,7 @@ export function ContactForm() {
             required
             type="email"
             name="email"
-            className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition focus:border-ember"
+            className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
             placeholder="jordan@email.com"
           />
         </div>
@@ -67,7 +67,7 @@ export function ContactForm() {
         </label>
         <input
           name="phone"
-          className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition focus:border-ember"
+          className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
           placeholder="(555) 555-1234"
         />
       </div>
@@ -79,7 +79,7 @@ export function ContactForm() {
           required
           name="message"
           rows={5}
-          className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition focus:border-ember"
+          className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
           placeholder="Tell us what you want to train..."
         />
       </div>

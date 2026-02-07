@@ -7,13 +7,13 @@ import { coaches } from "@/lib/data";
 export default function AboutPage() {
   return (
     <>
-      <section className="border-b border-white/10 bg-black/70 py-20">
+      <section className="border-b border-ink/10 bg-fog/80 py-20">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6">
             <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
               About DeadGame
             </p>
-            <h1 className="text-5xl font-display uppercase tracking-wide text-white">
+            <h1 className="text-5xl font-display uppercase tracking-wide text-ink">
               A Boxing Gym Built on Discipline
             </h1>
             <p className="text-base text-sand/70">
@@ -31,14 +31,14 @@ export default function AboutPage() {
               ].map((value) => (
                 <div
                   key={value}
-                  className="rounded-2xl border border-white/10 bg-black/50 px-4 py-3 text-xs uppercase tracking-[0.3em] text-sand/70"
+                  className="rounded-2xl border border-ink/10 bg-fog/70 px-4 py-3 text-xs uppercase tracking-[0.3em] text-sand/70"
                 >
                   {value}
                 </div>
               ))}
             </div>
           </div>
-          <div className="relative h-[380px] overflow-hidden rounded-[2.5rem] border border-white/10">
+          <div className="relative h-[380px] overflow-hidden rounded-[2.5rem] border border-ink/10">
             <Image
               src="/images/about-gym.svg"
               alt="DeadGame Boxing culture"
@@ -72,7 +72,7 @@ export default function AboutPage() {
           ].map((item) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-white/10 bg-black/60 p-6"
+              className="rounded-3xl border border-ink/10 bg-fog/80 p-6"
             >
               <h3 className="text-2xl font-display uppercase tracking-wide text-sand">
                 {item.title}
@@ -87,7 +87,7 @@ export default function AboutPage() {
         eyebrow="Team"
         title="Coaches Who Fight With You"
         description="Hands-on coaching from professionals who care about your growth."
-        className="bg-black/60"
+        className="bg-fog/80"
       >
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {coaches.map((coach) => (

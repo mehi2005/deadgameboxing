@@ -9,7 +9,7 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
       className={`rounded-3xl border p-6 shadow-lg ${
         tier.highlight
           ? "border-ember/60 bg-ember/10"
-          : "border-white/10 bg-black/60"
+          : "border-ink/10 bg-fog/80"
       }`}
     >
       <div className="flex items-center justify-between">

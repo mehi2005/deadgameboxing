@@ -5,7 +5,7 @@ type Program = (typeof programs)[number];
 
 export function ProgramCard({ program }: { program: Program }) {
   return (
-    <div className="rounded-3xl border border-white/10 bg-black/60 p-6 shadow-lg transition hover:border-ember/40">
+    <div className="rounded-3xl border border-ink/10 bg-fog/80 p-6 shadow-lg transition hover:border-ember/40">
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-ember/80">
@@ -15,7 +15,7 @@ export function ProgramCard({ program }: { program: Program }) {
             {program.title}
           </h3>
         </div>
-        <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+        <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-ink/10 bg-fog/60">
           <Image
             src={program.image}
             alt={program.title}

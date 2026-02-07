@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
-  --ink: #0b0b0b;
-  --ink-soft: #1a1a1a;
-  --ash: #2b2b2b;
-  --sand: #f4f1eb;
-  --fog: #e7e2d8;
+  color-scheme: light;
+  --ink: #1a1a1a;
+  --ink-soft: #2a2a2a;
+  --ash: #3a3a3a;
+  --sand: #2c2a27;
+  --fog: #e6dfd4;
   --ember: #d62828;
   --ember-dark: #b0171d;
   --gold: #cba135;
@@ -30,8 +30,8 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #141414 0%, #0b0b0b 45%, #070707 100%);
-  color: #f7f3ea;
+  background: radial-gradient(circle at top, #fbf8f2 0%, #f4efe6 45%, #efe7dc 100%);
+  color: var(--ink);
   font-family: var(--font-space-grotesk), system-ui, sans-serif;
 }
 
@@ -52,17 +52,17 @@ textarea {
 }
 
 .bg-grid {
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 120px 120px;
 }
 
 .glass {
-  background: rgba(12, 12, 12, 0.75);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(20, 20, 20, 0.08);
 }
 
 .text-shadow {
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
