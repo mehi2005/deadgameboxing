@@ -1,0 +1,15 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b1b1b"/>
+      <stop offset="100%" stop-color="#3b0a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="48" fill="url(#grad)"/>
+  <rect x="40" y="40" width="720" height="520" rx="32" fill="#0b0b0b" stroke="#d62828" stroke-opacity="0.4"/>
+  <path d="M140 400 C 220 280, 320 260, 420 300" stroke="#d62828" stroke-width="6" stroke-linecap="round"/>
+  <path d="M420 300 C 520 340, 620 320, 680 220" stroke="#cba135" stroke-width="5" stroke-linecap="round"/>
+  <text x="80" y="120" fill="#f4f1eb" font-size="28" font-family="Space Grotesk, Arial, sans-serif" letter-spacing="6">DEADGAME BOXING</text>
+  <text x="80" y="180" fill="#d62828" font-size="44" font-family="Bebas Neue, Impact, sans-serif" letter-spacing="4">ABOUT-GYM</text>
+  <text x="80" y="520" fill="#e7e2d8" font-size="16" font-family="Space Grotesk, Arial, sans-serif" letter-spacing="3">PLACEHOLDER IMAGE</text>
+</svg>
