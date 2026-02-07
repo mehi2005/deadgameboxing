@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CTASection } from "@/components/cta-section";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { Section } from "@/components/section";
 import { BookTrialButton } from "@/components/trial-modal-context";
 
@@ -53,15 +54,18 @@ export default function AboutPage() {
               />
             </div>
           </div>
-          <div className="relative h-[380px] overflow-hidden rounded-[2.5rem] border border-ink/10">
+          <ScrollReveal
+            from="right"
+            className="relative h-[440px] overflow-hidden border border-ink/10"
+          >
             <Image
-              src="/images/about-gym.svg"
-              alt="DeadGame Boxing culture"
+              src="/images/teamphoto3.webp"
+              alt="DeadGame Boxing team session"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover"
+              className="object-cover object-top"
             />
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -83,17 +87,36 @@ export default function AboutPage() {
         description="Train in Cedar Park with easy access for the greater Austin area."
         className="bg-fog/80"
       >
-        <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
-          <div className="grid gap-3 text-lg text-sand">
-            <p>600 S Bell Blvd Ste 207, Cedar Park, TX</p>
-            <p className="text-sand/70">(512) 215-9086</p>
+        <div className="grid gap-8 md:grid-cols-[1.1fr_1.2fr] md:items-center">
+          <div className="grid gap-5">
+            <div className="rounded-3xl border border-ink/10 bg-fog/80 p-6">
+              <p className="text-xs uppercase tracking-[0.35em] text-ember/80">
+                Address
+              </p>
+              <p className="mt-3 text-lg text-sand">
+                600 S Bell Blvd Ste 207, Cedar Park, TX
+              </p>
+              <p className="mt-2 text-base text-sand/70">(512) 215-9086</p>
+            </div>
+            <div className="rounded-3xl border border-ink/10 bg-fog/80 p-6 text-sm text-sand/70">
+              <p>
+                Parking is available on site. Bring wraps and water, or grab
+                what you need at the front desk.
+              </p>
+            </div>
           </div>
-          <div className="rounded-3xl border border-ink/10 bg-fog/80 p-6 text-sm text-sand/70">
-            <p>
-              Parking is available on site. Bring wraps and water, or grab what
-              you need at the front desk.
-            </p>
-          </div>
+          <ScrollReveal
+            from="right"
+            className="relative h-[432px] overflow-hidden border border-ink/10"
+          >
+            <Image
+              src="/images/teamphoto12.webp"
+              alt="DeadGame Boxing training group"
+              fill
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              className="object-cover object-top"
+            />
+          </ScrollReveal>
         </div>
       </Section>
 

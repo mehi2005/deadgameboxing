@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Space_Grotesk } from "next/font/google";
+import { Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
 import { TrialModalProvider } from "@/components/trial-modal-context";
 import { SiteFooter } from "@/components/site-footer";
@@ -11,9 +11,10 @@ const bebasNeue = Bebas_Neue({
   weight: ["400"],
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${spaceGrotesk.variable} antialiased bg-white text-ink`}
+        className={`${bebasNeue.variable} ${inter.variable} antialiased bg-white text-ink`}
       >
         <TrialModalProvider>
           <div className="min-h-screen bg-white bg-grid">
