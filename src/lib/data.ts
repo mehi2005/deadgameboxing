@@ -1,17 +1,16 @@
 export const siteInfo = {
-  name: "DeadGame Boxing",
-  address: "4827 Ironhook Ave, Seattle, WA 98104",
-  phone: "(206) 555-0198",
-  email: "train@deadgameboxing.com",
+  name: "Dead Game Boxing",
+  address: "600 S Bell Blvd Ste 207, Cedar Park, TX",
+  phone: "(512) 215-9086",
+  email: "deadgamebox@gmail.com",
   hours: [
-    { day: "Monday - Friday", time: "6:00 AM - 9:00 PM" },
-    { day: "Saturday", time: "8:00 AM - 6:00 PM" },
-    { day: "Sunday", time: "9:00 AM - 2:00 PM" },
+    { day: "Monday - Friday", time: "6:00 PM - 8:00 PM" },
+    { day: "Sunday", time: "5:00 PM - 7:00 PM" },
   ],
   socials: [
-    { label: "Instagram", href: "https://instagram.com" },
-    { label: "YouTube", href: "https://youtube.com" },
-    { label: "TikTok", href: "https://tiktok.com" },
+    { label: "Instagram", href: "https://www.instagram.com/dead_game_boxing/" },
+    { label: "YouTube", href: "#" },
+    { label: "TikTok", href: "#" },
   ],
 };
 
@@ -20,7 +19,6 @@ export const navLinks = [
   { label: "About", href: "/about" },
   { label: "Programs", href: "/programs" },
   { label: "Schedule", href: "/schedule" },
-  { label: "Rates", href: "/rates" },
   { label: "Contact", href: "/contact" },
   { label: "Blog", href: "/blog" },
   { label: "Shop", href: "/shop" },
@@ -40,6 +38,11 @@ export const programs = [
       "Stance, guard, and footwork foundations",
       "Focus mitts, heavy bag, and partner drills",
       "Conditioning finisher every class",
+      "Basic Membership: unlimited gym access during business hours",
+      "Group training classes Monday and Wednesday, 5-6 PM",
+      "Discounted personal training and mitt sessions",
+      "1-day drop-in available after the free trial",
+      "30-day cancellation policy",
     ],
   },
   {
@@ -52,9 +55,13 @@ export const programs = [
     description:
       "Confidence-building boxing classes designed for youth athletes.",
     details: [
-      "Safe, skill-first instruction",
-      "Athletic development and coordination",
-      "Character-focused coaching",
+      "Beginner class Tuesday and Thursday, 5-6 PM",
+      "Stance, footwork, hands-up defense, and conditioning",
+      "Builds discipline, confidence, and skill",
+      "Open gym access during business hours with parental supervision",
+      "Monthly kid camp membership option",
+      "Family package for two kids available",
+      "30-day cancellation policy",
     ],
   },
   {
@@ -67,9 +74,14 @@ export const programs = [
     description:
       "High-performance training for amateur bouts and tournament prep.",
     details: [
+      "Competition boxers only (book required)",
+      "Group training Monday through Thursday",
+      "Focused boxing fundamentals and skill development",
+      "Character building and self-confidence development",
       "Sparring, strategy, and ring IQ",
       "Strength + conditioning blocks",
       "Coach-led fight planning",
+      "30-day cancellation policy",
     ],
   },
   {
@@ -85,6 +97,9 @@ export const programs = [
       "Intervals, footwork ladders, and sled work",
       "Boxing-inspired HIIT circuits",
       "Athletic recovery guidance",
+      "Storm Fitness group training led by a USA Wrestling certified coach",
+      "Monthly membership option available",
+      "30-day cancellation policy",
     ],
   },
   {
@@ -100,6 +115,13 @@ export const programs = [
       "Custom training plan and assessments",
       "Technique refinement and focus work",
       "Flexible scheduling options",
+      "Gold Membership: one 60-minute personal session each week",
+      "Platinum Membership: one 60-minute personal session plus a 30-minute mitt session each week",
+      "Unlimited gym access during business hours (Gold and Platinum)",
+      "1-on-1 personal training packages for boxing or strength + conditioning",
+      "Each credit equals 1 hour; use within 30-60 days",
+      "Mitt session packages: 30-minute ring work on footwork, movement, and form",
+      "30-day cancellation policy",
     ],
   },
 ];
