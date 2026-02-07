@@ -127,14 +127,14 @@ function TrialModal({
           <button
             type="button"
             onClick={onClose}
-            className="rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.3em] text-sand/70 transition hover:text-white"
+            className="rounded-full border border-ink/20 px-4 py-2 text-xs uppercase tracking-[0.3em] text-sand/70 transition hover:text-ink"
           >
             Close
           </button>
         </div>
 
         {submitted ? (
-          <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-8 text-center">
+          <div className="mt-10 rounded-2xl border border-ink/10 bg-ink/5 p-8 text-center">
             <p className="text-sm uppercase tracking-[0.4em] text-ember">
               Submission received
             </p>
@@ -167,7 +167,7 @@ function TrialModal({
               <input
                 required
                 name="name"
-                className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition focus:border-ember"
+                className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
                 placeholder="Jordan Hayes"
               />
             </div>
@@ -179,7 +179,7 @@ function TrialModal({
                 required
                 type="email"
                 name="email"
-                className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition focus:border-ember"
+                className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
                 placeholder="jordan@email.com"
               />
             </div>
@@ -190,7 +190,7 @@ function TrialModal({
               <input
                 required
                 name="phone"
-                className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition focus:border-ember"
+                className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
                 placeholder="(555) 555-1234"
               />
             </div>
@@ -200,7 +200,7 @@ function TrialModal({
               </label>
               <select
                 name="program"
-                className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition focus:border-ember"
+                className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
               >
                 {programs.map((program) => (
                   <option key={program.slug} value={program.title}>
@@ -217,7 +217,7 @@ function TrialModal({
                 required
                 type="datetime-local"
                 name="datetime"
-                className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition focus:border-ember"
+                className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
               />
             </div>
             <div className="md:col-span-2">

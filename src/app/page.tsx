@@ -19,18 +19,31 @@ export default function Home() {
         title="Train With Purpose"
         description="Choose a program that matches your goals and level. Our coaches tailor every session for progress."
       >
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {programs.slice(0, 3).map((program) => (
-            <ProgramCard key={program.slug} program={program} />
-          ))}
-        </div>
-        <div className="mt-8">
-          <Link
-            href="/programs"
-            className="text-xs uppercase tracking-[0.35em] text-ember"
-          >
-            See all programs →
-          </Link>
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+          <div>
+            <div className="grid gap-6 md:grid-cols-2">
+              {programs.slice(0, 3).map((program) => (
+                <ProgramCard key={program.slug} program={program} />
+              ))}
+            </div>
+            <div className="mt-8">
+              <Link
+                href="/programs"
+                className="text-xs uppercase tracking-[0.35em] text-ember"
+              >
+                See all programs →
+              </Link>
+            </div>
+          </div>
+          <div className="relative h-[520px] w-full max-w-[360px] place-self-center overflow-hidden rounded-md border border-ink/10">
+            <Image
+              src="/images/teamphoto1.webp"
+              alt="DeadGame Boxing team training"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover object-top"
+            />
+          </div>
         </div>
       </Section>
 
@@ -38,7 +51,7 @@ export default function Home() {
         eyebrow="Facility"
         title="Built For Real Fighters"
         description="A focused space with dedicated ring time, conditioning zones, and recovery amenities."
-        className="bg-black/60"
+        className="bg-fog/80"
       >
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="grid gap-4 text-sm text-sand/70">
@@ -56,21 +69,32 @@ export default function Home() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-xs uppercase tracking-[0.3em] text-sand/70"
+                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-xs uppercase tracking-[0.3em] text-sand/70"
                 >
                   {item}
                 </div>
               ))}
             </div>
           </div>
-          <div className="relative h-[360px] overflow-hidden rounded-[2.5rem] border border-white/10">
-            <Image
-              src="/images/facility.svg"
-              alt="DeadGame Boxing facility"
-              fill
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover"
-            />
+          <div className="relative pb-20">
+            <div className="relative h-[400px] overflow-hidden rounded-md border border-ink/10">
+              <Image
+                src="/images/facility.svg"
+                alt="DeadGame Boxing facility"
+                fill
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-12 left-6 h-[240px] w-[170px] overflow-hidden rounded-md border border-ink/10 shadow-2xl sm:left-10 sm:h-[260px] sm:w-[190px]">
+              <Image
+                src="/images/teamphoto2.webp"
+                alt="DeadGame Boxing team"
+                fill
+                sizes="(max-width: 1024px) 60vw, 20vw"
+                className="object-cover object-top"
+              />
+            </div>
           </div>
         </div>
       </Section>
@@ -80,7 +104,16 @@ export default function Home() {
         title="Meet the Crew"
         description="Our coaching team blends competitive experience with a tactical, data-driven approach."
       >
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="relative h-[420px] w-full max-w-[420px] place-self-center overflow-hidden rounded-md border border-ink/10">
+          <Image
+            src="/images/teamphoto3.webp"
+            alt="DeadGame Boxing team session"
+            fill
+            sizes="(max-width: 1024px) 100vw, 80vw"
+            className="object-cover object-top"
+          />
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {coaches.map((coach) => (
             <CoachCard key={coach.name} coach={coach} />
           ))}
@@ -91,16 +124,29 @@ export default function Home() {
         eyebrow="Schedule"
         title="Weekly Training Flow"
         description="Choose from morning conditioning, midday skill work, and evening fight prep."
-        className="bg-black/60"
+        className="bg-fog/80"
       >
-        <ScheduleTable items={schedule.slice(0, 6)} />
-        <div className="mt-8">
-          <Link
-            href="/schedule"
-            className="text-xs uppercase tracking-[0.35em] text-ember"
-          >
-            View full schedule →
-          </Link>
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+          <div>
+            <ScheduleTable items={schedule.slice(0, 6)} />
+            <div className="mt-8">
+              <Link
+                href="/schedule"
+                className="text-xs uppercase tracking-[0.35em] text-ember"
+              >
+                View full schedule →
+              </Link>
+            </div>
+          </div>
+          <div className="relative h-[520px] w-full max-w-[360px] place-self-center overflow-hidden rounded-md border border-ink/10">
+            <Image
+              src="/images/teamphoto4.webp"
+              alt="DeadGame Boxing training floor"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover object-top"
+            />
+          </div>
         </div>
       </Section>
 
@@ -120,13 +166,13 @@ export default function Home() {
         eyebrow="FAQ"
         title="Questions, Answered"
         description="Everything you need before stepping into your first class."
-        className="bg-black/60"
+        className="bg-fog/80"
       >
         <div className="grid gap-4 md:grid-cols-2">
           {faqs.map((faq) => (
             <div
               key={faq.question}
-              className="rounded-3xl border border-white/10 bg-black/60 p-6"
+              className="rounded-3xl border border-ink/10 bg-fog/80 p-6"
             >
               <h3 className="text-lg font-display uppercase tracking-wide text-sand">
                 {faq.question}
