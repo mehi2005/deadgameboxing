@@ -1,8 +1,22 @@
 import Image from "next/image";
-import { CoachCard } from "@/components/coach-card";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/section";
-import { coaches } from "@/lib/data";
+import { BookTrialButton } from "@/components/trial-modal-context";
+
+const offerings = [
+  "Boxing Fundamentals",
+  "Youth Boxing",
+  "Competition Team",
+  "Conditioning",
+  "Private Training",
+];
+
+const trainers = [
+  { name: "Gabe Benavides", role: "Coach" },
+  { name: "Jacob Acuna", role: "Coach" },
+  { name: "Ricco Spencer", role: "Coach" },
+  { name: "Storm Cosby", role: "Coach" },
+];
 
 export default function AboutPage() {
   return (
@@ -11,31 +25,32 @@ export default function AboutPage() {
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6">
             <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
-              About DeadGame
+              About
             </p>
             <h1 className="text-5xl font-display uppercase tracking-wide text-white">
-              A Boxing Gym Built on Discipline
+              Dead Game Boxing
             </h1>
-            <p className="text-base text-sand/70">
-              DeadGame Boxing is a competitive-minded gym where skill, grit, and
-              respect lead every session. We believe in hard coaching, clear
-              standards, and building athletes who can perform in and out of the
-              ring.
+            <p className="text-xl text-sand/80">
+              Elite team training, built to develop disciplined boxers and real
+              competitors.
             </p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {[
-                "Coach-led training plans",
-                "Youth and adult programs",
-                "Competition prep",
-                "Supportive community",
-              ].map((value) => (
-                <div
-                  key={value}
-                  className="rounded-2xl border border-white/10 bg-black/50 px-4 py-3 text-xs uppercase tracking-[0.3em] text-sand/70"
-                >
-                  {value}
-                </div>
-              ))}
+            <div className="grid gap-4 text-base text-sand/70">
+              <p>
+                Dead Game Boxing is a boxing gym in Cedar Park serving the
+                Austin area. You train with structure, clear coaching, and a
+                pace that matches your level. We focus on fundamentals first,
+                then conditioning, then competition prep.
+              </p>
+              <p>
+                Whether you want to learn the basics, build confidence, or
+                compete, you will get a plan that makes progress measurable.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <BookTrialButton
+                label="Book a Free Trial"
+                className="rounded-full bg-ember px-8 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-ember-dark"
+              />
             </div>
           </div>
           <div className="relative h-[380px] overflow-hidden rounded-[2.5rem] border border-white/10">
@@ -50,50 +65,60 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Section
-        eyebrow="Our Mission"
-        title="Crafting Complete Fighters"
-        description="We train athletes with structure, accountability, and a relentless pursuit of fundamentals."
-      >
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            {
-              title: "Intentional Coaching",
-              text: "Every class is mapped to a skill target so you can track progress.",
-            },
-            {
-              title: "Competition Ready",
-              text: "For those who want to fight, we build strategy and ring IQ.",
-            },
-            {
-              title: "Community Driven",
-              text: "We push each other hard and keep every round respectful.",
-            },
-          ].map((item) => (
+      <Section title="What We Offer">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {offerings.map((item) => (
             <div
-              key={item.title}
-              className="rounded-3xl border border-white/10 bg-black/60 p-6"
+              key={item}
+              className="rounded-2xl border border-white/10 bg-black/50 px-5 py-4 text-xs uppercase tracking-[0.3em] text-sand/70"
             >
-              <h3 className="text-2xl font-display uppercase tracking-wide text-sand">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-sm text-sand/70">{item.text}</p>
+              {item}
             </div>
           ))}
         </div>
       </Section>
 
       <Section
-        eyebrow="Team"
-        title="Coaches Who Fight With You"
-        description="Hands-on coaching from professionals who care about your growth."
+        title="Location"
+        description="Train in Cedar Park with easy access for the greater Austin area."
         className="bg-black/60"
       >
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {coaches.map((coach) => (
-            <CoachCard key={coach.name} coach={coach} />
+        <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+          <div className="grid gap-3 text-lg text-sand">
+            <p>600 S Bell Blvd Ste 207, Cedar Park, TX</p>
+            <p className="text-sand/70">(512) 215-9086</p>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-black/50 p-6 text-sm text-sand/70">
+            <p>
+              Parking is available on site. Bring wraps and water, or grab what
+              you need at the front desk.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <Section
+        title="Meet Our Trainers"
+        description="Names now, full bios coming soon."
+      >
+        <div className="grid gap-4 sm:grid-cols-2">
+          {trainers.map((trainer) => (
+            <div
+              key={trainer.name}
+              className="rounded-3xl border border-white/10 bg-black/60 p-6"
+            >
+              <p className="text-2xl font-display uppercase tracking-wide text-sand">
+                {trainer.name}
+              </p>
+              <p className="mt-2 text-xs uppercase tracking-[0.35em] text-ember/80">
+                {trainer.role}
+              </p>
+            </div>
           ))}
         </div>
+        <p className="mt-6 text-xs uppercase tracking-[0.35em] text-sand/60">
+          Full coach profiles coming soon.
+        </p>
       </Section>
 
       <CTASection />
