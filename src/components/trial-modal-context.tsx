@@ -104,16 +104,24 @@ function TrialModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4 py-10"
+      className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:items-center sm:py-10"
       onClick={onClose}
     >
       <div
         role="dialog"
         aria-modal="true"
-        className="glass w-full max-w-2xl rounded-3xl p-8 text-sand shadow-2xl"
+        className="glass relative w-full max-w-2xl rounded-3xl p-6 text-sand shadow-2xl sm:p-8"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="flex items-start justify-between">
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close modal"
+          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 text-sm uppercase tracking-[0.2em] text-sand/70 transition hover:text-ink"
+        >
+          X
+        </button>
+        <div className="max-h-[75vh] overflow-y-auto pr-1 sm:max-h-[80vh]">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-ember">
               Free Trial
@@ -132,115 +140,108 @@ function TrialModal({
               before arriving.
             </p>
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-full border border-ink/20 px-4 py-2 text-xs uppercase tracking-[0.3em] text-sand/70 transition hover:text-ink"
-          >
-            Close
-          </button>
-        </div>
 
-        {submitted ? (
-          <div className="mt-10 rounded-2xl border border-ink/10 bg-ink/5 p-8 text-center">
-            <p className="text-sm uppercase tracking-[0.4em] text-ember">
-              Submission received
-            </p>
-            <h4 className="mt-4 text-2xl font-display uppercase tracking-wide">
-              You are on the roster.
-            </h4>
-            <p className="mt-3 text-sm text-sand/70">
-              A coach will reach out within 24 hours to confirm your session.
-            </p>
-            <button
-              type="button"
-              onClick={onClose}
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-ember px-6 py-3 text-xs font-semibold uppercase tracking-widest text-white"
-            >
-              Done
-            </button>
-          </div>
-        ) : (
-          <form
-            className="mt-10 grid gap-5 md:grid-cols-2"
-            onSubmit={(event) => {
-              event.preventDefault();
-              onSubmit();
-            }}
-          >
-            <div className="flex flex-col gap-2">
-              <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
-                Full name
-              </label>
-              <input
-                required
-                name="name"
-                className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
-                placeholder="Jordan Hayes"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
-                Email
-              </label>
-              <input
-                required
-                type="email"
-                name="email"
-                className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
-                placeholder="jordan@email.com"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
-                Phone
-              </label>
-              <input
-                required
-                name="phone"
-                className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
-                placeholder="(555) 555-1234"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
-                Preferred program
-              </label>
-              <select
-                name="program"
-                className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
-              >
-                {programs.map((program) => (
-                  <option key={program.slug} value={program.title}>
-                    {program.title}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="flex flex-col gap-2 md:col-span-2">
-              <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
-                Preferred date + time
-              </label>
-              <input
-                required
-                type="datetime-local"
-                name="datetime"
-                className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
-              />
-            </div>
-            <div className="md:col-span-2">
-              <button
-                type="submit"
-                className="w-full rounded-full bg-ember px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-ember-dark"
-              >
-                Request my trial
-              </button>
-              <p className="mt-3 text-xs text-sand/60">
-                We will confirm availability within one business day.
+          {submitted ? (
+            <div className="mt-10 rounded-2xl border border-ink/10 bg-ink/5 p-8 text-center">
+              <p className="text-sm uppercase tracking-[0.4em] text-ember">
+                Submission received
               </p>
+              <h4 className="mt-4 text-2xl font-display uppercase tracking-wide">
+                You are on the roster.
+              </h4>
+              <p className="mt-3 text-sm text-sand/70">
+                A coach will reach out within 24 hours to confirm your session.
+              </p>
+              <button
+                type="button"
+                onClick={onClose}
+                className="mt-6 inline-flex items-center justify-center rounded-full bg-ember px-6 py-3 text-xs font-semibold uppercase tracking-widest text-white"
+              >
+                Done
+              </button>
             </div>
-          </form>
-        )}
+          ) : (
+            <form
+              className="mt-10 grid gap-5 md:grid-cols-2"
+              onSubmit={(event) => {
+                event.preventDefault();
+                onSubmit();
+              }}
+            >
+              <div className="flex flex-col gap-2">
+                <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
+                  Full name
+                </label>
+                <input
+                  required
+                  name="name"
+                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+                  placeholder="Jordan Hayes"
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
+                  Email
+                </label>
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+                  placeholder="jordan@email.com"
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
+                  Phone
+                </label>
+                <input
+                  required
+                  name="phone"
+                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+                  placeholder="(555) 555-1234"
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
+                  Preferred program
+                </label>
+                <select
+                  name="program"
+                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+                >
+                  {programs.map((program) => (
+                    <option key={program.slug} value={program.title}>
+                      {program.title}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex flex-col gap-2 md:col-span-2">
+                <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
+                  Preferred date + time
+                </label>
+                <input
+                  required
+                  type="datetime-local"
+                  name="datetime"
+                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+                />
+              </div>
+              <div className="md:col-span-2">
+                <button
+                  type="submit"
+                  className="w-full rounded-full bg-ember px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-ember-dark"
+                >
+                  Request my trial
+                </button>
+                <p className="mt-3 text-xs text-sand/60">
+                  We will confirm availability within one business day.
+                </p>
+              </div>
+            </form>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -128,25 +128,32 @@ export const programs = [
 
 export const coaches = [
   {
-    name: "Rafael Torres",
-    role: "Head Coach",
+    name: "Gabe Benavides",
+    role: "Coach",
     image: "/images/coach-rafael.svg",
-    bio: "Former national champion with 12 years coaching elite amateur fighters.",
-    specialties: ["Competition prep", "Footwork", "Strategy"],
+    bio: "Competition-minded coach focused on sharp fundamentals and ring IQ.",
+    specialties: ["Fundamentals", "Combinations", "Defense"],
   },
   {
-    name: "Naomi Brooks",
-    role: "Youth Program Lead",
+    name: "Jacob Acuna",
+    role: "Coach",
     image: "/images/coach-naomi.svg",
-    bio: "Certified youth coach focused on skill development and confidence.",
-    specialties: ["Youth fundamentals", "Athletic development", "Mobility"],
+    bio: "Patient, detail-driven coaching with a focus on technique and timing.",
+    specialties: ["Footwork", "Timing", "Ring movement"],
   },
   {
-    name: "Malik Rhodes",
-    role: "Strength + Conditioning",
+    name: "Ricco Spencer",
+    role: "Coach",
     image: "/images/coach-malik.svg",
-    bio: "Performance coach blending boxing-specific strength and speed training.",
-    specialties: ["Power", "Speed work", "Recovery"],
+    bio: "High-energy sessions that build pace, endurance, and clean mechanics.",
+    specialties: ["Conditioning", "Bag work", "Pace"],
+  },
+  {
+    name: "Storm Cosby",
+    role: "Coach",
+    image: "/images/coach-malik.svg",
+    bio: "Strength-first training that translates to sharper, faster rounds.",
+    specialties: ["Strength", "Explosiveness", "Recovery"],
   },
 ];
 
