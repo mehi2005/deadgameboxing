@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CTASection } from "@/components/cta-section";
-import { ProgramsGrid } from "@/components/programs-grid";
+import { ProgramsSwitcher } from "@/components/programs-switcher";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Section } from "@/components/section";
 
@@ -48,9 +48,9 @@ export default function ProgramsPage() {
       <Section
         eyebrow="Programs"
         title="Find Your Track"
-        description="Open the cards for program details, intensity, and class structure."
+        description="Select a program name to see details, intensity, and class structure."
       >
-        <ProgramsGrid />
+        <ProgramsSwitcher />
       </Section>
 
       <CTASection />

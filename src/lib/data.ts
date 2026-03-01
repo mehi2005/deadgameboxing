@@ -20,7 +20,6 @@ export const navLinks = [
   { label: "Programs", href: "/programs" },
   { label: "Schedule", href: "/schedule" },
   { label: "Contact", href: "/contact" },
-  { label: "Waiver", href: "/waiver" },
   { label: "Shop", href: "/shop" },
 ];
 
