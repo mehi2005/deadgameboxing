@@ -35,15 +35,6 @@ export default function AboutPage() {
                 compete, you will get a plan that makes progress measurable.
               </p>
             </div>
-            <div className="relative h-28 w-full max-w-sm overflow-hidden rounded-2xl border border-ink/10">
-              <Image
-                src="/images/dg-ring-instruction.jpg"
-                alt="Coach instruction in the ring"
-                fill
-                sizes="(max-width: 1024px) 100vw, 28vw"
-                className="object-cover transition duration-700 hover:scale-105"
-              />
-            </div>
             <div className="flex flex-wrap gap-4">
               <BookTrialButton
                 label="Book a Free Trial"
@@ -74,20 +65,24 @@ export default function AboutPage() {
       <Section
         title="Location"
         description="Train in Cedar Park with easy access for the greater Austin area."
-        className="bg-fog-soft/55"
+        className="border-y border-black/10 bg-white py-6 sm:py-8"
+        titleClassName="!text-black !text-4xl sm:!text-5xl"
+        descriptionClassName="!text-black"
+        headerClassName="gap-3"
+        childrenClassName="!mt-6 sm:!mt-8"
       >
         <div className="grid gap-8 md:grid-cols-[1.1fr_1.2fr] md:items-center">
           <div className="grid gap-5">
-            <div className="rounded-3xl border border-ink/10 bg-fog/80 p-6">
-              <p className="text-xs uppercase tracking-[0.35em] text-ember">
+            <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-[0_12px_28px_rgba(0,0,0,0.08)]">
+              <p className="text-xs uppercase tracking-[0.35em] text-black/65">
                 Address
               </p>
-              <p className="mt-3 text-lg text-sand">
+              <p className="mt-3 text-lg text-black">
                 600 S Bell Blvd Ste 207, Cedar Park, TX
               </p>
-              <p className="mt-2 text-base text-sand/70">(512) 215-9086</p>
+              <p className="mt-2 text-base text-black/70">(512) 215-9086</p>
             </div>
-            <div className="rounded-3xl border border-ink/10 bg-fog/80 p-6 text-sm text-sand/70">
+            <div className="rounded-3xl border border-black/10 bg-white p-6 text-sm text-black/70 shadow-[0_12px_28px_rgba(0,0,0,0.08)]">
               <p>
                 Parking is available on site. Bring wraps and water, or grab
                 what you need at the front desk.
@@ -109,25 +104,25 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <section className="border-y border-black/10 bg-white py-24 sm:py-28">
-        <div className="mx-auto w-full max-w-6xl px-6">
+      <section className="border-y border-ink/10 bg-fog-soft/55 py-24 sm:py-28">
+        <div className="mx-auto w-full max-w-[1440px] px-0">
           <div className="flex flex-col gap-5">
-            <span className="text-xs uppercase tracking-[0.4em] text-black/65">
+            <span className="text-xs uppercase tracking-[0.4em] text-ember/90">
               Coaches
             </span>
             <div className="flex flex-col gap-4">
-              <h2 className="max-w-4xl text-5xl font-display uppercase tracking-wide text-black sm:text-6xl">
+              <h2 className="max-w-4xl text-5xl font-display uppercase tracking-wide text-ink sm:text-6xl">
                 Meet the Crew
               </h2>
-              <p className="max-w-3xl text-base leading-relaxed text-black/70 sm:text-lg">
+              <p className="max-w-3xl text-base leading-relaxed text-sand/75 sm:text-lg">
                 Our coaching team blends competitive experience with a tactical, data-driven approach.
               </p>
             </div>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {coaches.map((coach) => (
-              <CoachCard key={coach.name} coach={coach} variant="light" />
+              <CoachCard key={coach.name} coach={coach} variant="dark" />
             ))}
           </div>
         </div>
