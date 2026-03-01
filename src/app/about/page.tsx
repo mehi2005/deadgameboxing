@@ -1,28 +1,11 @@
 import Image from "next/image";
+import { CoachCard } from "@/components/coach-card";
 import { CTASection } from "@/components/cta-section";
+import { RotatingImage } from "@/components/rotating-image";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Section } from "@/components/section";
 import { BookTrialButton } from "@/components/trial-modal-context";
-
-const offerings = [
-  "Kids Boxing Academy",
-  "1 Day Drop-In",
-  "Competition Boxing Membership",
-  "Storm Fitness",
-  "1 on 1 Personal Training Package",
-  "Basic Membership",
-  "Gold Membership",
-  "Platinum Membership",
-  "Fight Ready Fitness Training Camp",
-  "Mitt Session Package",
-];
-
-const trainers = [
-  { name: "Gabe Benavides", role: "Coach" },
-  { name: "Jacob Acuna", role: "Coach" },
-  { name: "Ricco Spencer", role: "Coach" },
-  { name: "Storm Cosby", role: "Coach" },
-];
+import { coaches } from "@/lib/data";
 
 export default function AboutPage() {
   return (
@@ -72,29 +55,21 @@ export default function AboutPage() {
             from="right"
             className="relative h-[440px] overflow-hidden border border-ink/10"
           >
-            <Image
-              src="/images/teamphoto3.webp"
-              alt="DeadGame Boxing team session"
-              fill
+            <RotatingImage
+              images={[
+                "/images/dg-coach-talk.jpg",
+                "/images/teamphoto1.webp",
+                "/images/teamphoto10.webp",
+                "/images/teamphoto11.webp",
+              ]}
+              alt="DeadGame Boxing team training"
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-cover object-top"
+              intervalMs={5000}
             />
           </ScrollReveal>
         </div>
       </section>
-
-      <Section title="What We Offer">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {offerings.map((item) => (
-            <div
-              key={item}
-              className="rounded-2xl border border-ink/10 bg-fog/80 px-5 py-4 text-xs uppercase tracking-[0.3em] text-sand/70"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </Section>
 
       <Section
         title="Location"
@@ -134,29 +109,29 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section
-        title="Meet Our Trainers"
-        description="Names now, full bios coming soon."
-      >
-        <div className="grid gap-4 sm:grid-cols-2">
-          {trainers.map((trainer) => (
-            <div
-              key={trainer.name}
-              className="rounded-3xl border border-ink/10 bg-fog/80 p-6"
-            >
-              <p className="text-2xl font-display uppercase tracking-wide text-sand">
-                {trainer.name}
-              </p>
-              <p className="mt-2 text-xs uppercase tracking-[0.35em] text-ember/80">
-                {trainer.role}
+      <section className="border-y border-black/10 bg-white py-24 sm:py-28">
+        <div className="mx-auto w-full max-w-6xl px-6">
+          <div className="flex flex-col gap-5">
+            <span className="text-xs uppercase tracking-[0.4em] text-black/65">
+              Coaches
+            </span>
+            <div className="flex flex-col gap-4">
+              <h2 className="max-w-4xl text-5xl font-display uppercase tracking-wide text-black sm:text-6xl">
+                Meet the Crew
+              </h2>
+              <p className="max-w-3xl text-base leading-relaxed text-black/70 sm:text-lg">
+                Our coaching team blends competitive experience with a tactical, data-driven approach.
               </p>
             </div>
-          ))}
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {coaches.map((coach) => (
+              <CoachCard key={coach.name} coach={coach} variant="light" />
+            ))}
+          </div>
         </div>
-        <p className="mt-6 text-xs uppercase tracking-[0.35em] text-sand/60">
-          Full coach profiles coming soon.
-        </p>
-      </Section>
+      </section>
 
       <CTASection />
     </>
