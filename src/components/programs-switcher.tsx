@@ -24,7 +24,7 @@ export function ProgramsSwitcher({ items = allPrograms }: { items?: Program[] })
               key={program.slug}
               type="button"
               onClick={() => setActiveIndex(index)}
-              className={`rounded-2xl border px-5 py-4 text-left text-sm uppercase tracking-[0.3em] transition ${
+              className={`w-full whitespace-normal wrap-break-word rounded-2xl border px-5 py-4 text-left text-sm uppercase tracking-[0.3em] leading-snug transition ${
                 isActive
                   ? "border-ember/70 bg-fog-lift text-white shadow-[0_0_0_1px_rgba(255,77,59,0.18)]"
                   : "border-ink/10 text-sand/70 hover:border-ember/50 hover:text-ember"
@@ -42,7 +42,7 @@ export function ProgramsSwitcher({ items = allPrograms }: { items?: Program[] })
             {activeProgram.level}
           </p>
         ) : null}
-        <h3 className="text-3xl font-display uppercase tracking-wide text-fog">
+        <h3 className="wrap-break-word text-3xl font-display uppercase tracking-wide text-fog leading-tight">
           {activeProgram.title}
         </h3>
         {activeProgram.duration || activeProgram.intensity ? (
@@ -56,7 +56,7 @@ export function ProgramsSwitcher({ items = allPrograms }: { items?: Program[] })
           </div>
         ) : null}
         {activeProgram.description ? (
-          <p className="text-lg text-fog/80">
+          <p className="wrap-break-word text-lg text-fog/80">
             {activeProgram.description}
           </p>
         ) : null}

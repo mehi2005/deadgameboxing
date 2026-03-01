@@ -32,11 +32,11 @@ export function Section({
             </span>
           ) : null}
           <div className="flex flex-col gap-4">
-            <h2 className="max-w-4xl text-5xl font-display uppercase tracking-wide text-ink sm:text-6xl">
+            <h2 className="max-w-4xl break-words text-5xl font-display uppercase tracking-wide text-ink leading-tight sm:text-6xl">
               {title}
             </h2>
             {description ? (
-              <p className="max-w-3xl text-base leading-relaxed text-sand/78 sm:text-lg">
+              <p className="max-w-3xl break-words text-base leading-relaxed text-sand/78 sm:text-lg">
                 {description}
               </p>
             ) : null}
