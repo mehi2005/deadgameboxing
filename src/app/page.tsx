@@ -10,7 +10,7 @@ import { RotatingImage } from "@/components/rotating-image";
 import { ScheduleTable } from "@/components/schedule-table";
 import { Section } from "@/components/section";
 import { TestimonialCard } from "@/components/testimonial-card";
-import { coaches, faqs, schedule, testimonials } from "@/lib/data";
+import { coaches, faqs, schedule, testimonials } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -124,7 +124,7 @@ export default function Home() {
                 href="/schedule"
                 className="text-xs uppercase tracking-[0.35em] text-ember"
               >
-                View full schedule →
+                View full schedule ?
               </Link>
             </div>
           </div>
