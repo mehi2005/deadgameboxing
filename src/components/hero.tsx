@@ -7,7 +7,7 @@ export function Hero() {
     <section className="relative overflow-hidden border-b border-ink/10 py-24 sm:py-28">
       <div className="absolute inset-0">
         <Image
-          src="/images/homapagebackroundpng.jpg"
+          src="/images/dg-hero-ring.jpg"
           alt="Dead Game Boxing gloves in the ring"
           fill
           sizes="100vw"
