@@ -5,9 +5,9 @@ type Coach = (typeof coaches)[number];
 
 export function CoachCard({ coach }: { coach: Coach }) {
   return (
-    <div className="rounded-3xl border border-ink/10 bg-fog/80 p-6 shadow-lg">
+    <div className="surface-card hover-lift rounded-3xl p-6">
       <div className="flex items-center gap-4">
-        <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-ink/10 bg-fog/60">
+        <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-ink/15 bg-fog-lift/70">
           <Image
             src={coach.image}
             alt={coach.name}
@@ -17,7 +17,7 @@ export function CoachCard({ coach }: { coach: Coach }) {
           />
         </div>
         <div>
-          <h3 className="text-xl font-display uppercase tracking-wide text-sand">
+          <h3 className="text-xl font-display uppercase tracking-wide text-ink">
             {coach.name}
           </h3>
           <p className="text-xs uppercase tracking-[0.25em] text-ember/80">
@@ -25,10 +25,10 @@ export function CoachCard({ coach }: { coach: Coach }) {
           </p>
         </div>
       </div>
-      <p className="mt-4 text-sm text-sand/70">{coach.bio}</p>
+      <p className="mt-4 text-sm leading-relaxed text-sand/76">{coach.bio}</p>
       <div className="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-sand/50">
         {coach.specialties.map((item) => (
-          <span key={item} className="rounded-full border border-ink/10 px-3 py-1">
+          <span key={item} className="rounded-full border border-ink/15 bg-fog-lift/60 px-3 py-1">
             {item}
           </span>
         ))}

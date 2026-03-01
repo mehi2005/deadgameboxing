@@ -35,7 +35,7 @@ export function SchedulePhoto({
 
     observer.observe(node);
     return () => observer.disconnect();
-  }, []);
+  }, [from]);
 
   const hiddenTranslate =
     from === "right" ? "translate-x-6" : from === "left" ? "-translate-x-6" : "";
@@ -43,7 +43,7 @@ export function SchedulePhoto({
   return (
     <div
       ref={wrapperRef}
-      className={`relative h-[620px] w-full max-w-[560px] place-self-center overflow-hidden rounded-md border border-ink/10 ${
+      className={`relative h-[620px] w-full max-w-[560px] place-self-center overflow-hidden rounded-2xl border border-ink/12 ${
         from === "none"
           ? ""
           : `transition-all duration-700 ease-out motion-reduce:transition-none ${

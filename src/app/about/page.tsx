@@ -22,7 +22,7 @@ const trainers = [
 export default function AboutPage() {
   return (
     <>
-      <section className="border-b border-ink/10 bg-fog/80 py-20">
+      <section className="border-b border-ink/10 bg-fog-soft/55 py-24">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6">
             <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
@@ -46,6 +46,15 @@ export default function AboutPage() {
                 Whether you want to learn the basics, build confidence, or
                 compete, you will get a plan that makes progress measurable.
               </p>
+            </div>
+            <div className="relative h-28 w-full max-w-sm overflow-hidden rounded-2xl border border-ink/10">
+              <Image
+                src="/images/dg-ring-instruction.jpg"
+                alt="Coach instruction in the ring"
+                fill
+                sizes="(max-width: 1024px) 100vw, 28vw"
+                className="object-cover transition duration-700 hover:scale-105"
+              />
             </div>
             <div className="flex flex-wrap gap-4">
               <BookTrialButton
@@ -85,7 +94,7 @@ export default function AboutPage() {
       <Section
         title="Location"
         description="Train in Cedar Park with easy access for the greater Austin area."
-        className="bg-fog/80"
+        className="bg-fog-soft/55"
       >
         <div className="grid gap-8 md:grid-cols-[1.1fr_1.2fr] md:items-center">
           <div className="grid gap-5">

@@ -32,12 +32,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`${bebasNeue.variable} ${inter.variable} antialiased bg-white text-ink`}
+        className={`${bebasNeue.variable} ${inter.variable} antialiased bg-fog text-ink`}
       >
         <TrialModalProvider>
-          <div className="min-h-screen bg-white bg-grid">
+          <div className="min-h-screen bg-grid">
             <SiteNav />
             <main className="bg-transparent">{children}</main>
             <SiteFooter />

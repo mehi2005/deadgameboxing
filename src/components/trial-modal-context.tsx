@@ -117,7 +117,7 @@ function TrialModal({
           type="button"
           onClick={onClose}
           aria-label="Close modal"
-          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 text-sm uppercase tracking-[0.2em] text-sand/70 transition hover:text-ink"
+          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 text-sm uppercase tracking-[0.2em] text-sand/74 transition hover:text-ember"
         >
           X
         </button>
@@ -129,7 +129,7 @@ function TrialModal({
             <h3 className="mt-3 text-3xl font-display uppercase tracking-wide">
               Book Your First Session
             </h3>
-            <p className="mt-2 text-sm text-sand/70">
+            <p className="mt-2 text-sm text-sand/74">
               Tell us what you want to train and we will confirm your spot.
             </p>
             <p className="mt-2 text-sm text-ember/90">
@@ -149,7 +149,7 @@ function TrialModal({
               <h4 className="mt-4 text-2xl font-display uppercase tracking-wide">
                 You are on the roster.
               </h4>
-              <p className="mt-3 text-sm text-sand/70">
+              <p className="mt-3 text-sm text-sand/74">
                 A coach will reach out within 24 hours to confirm your session.
               </p>
               <button
@@ -175,7 +175,7 @@ function TrialModal({
                 <input
                   required
                   name="name"
-                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+                  className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
                   placeholder="Jordan Hayes"
                 />
               </div>
@@ -187,7 +187,7 @@ function TrialModal({
                   required
                   type="email"
                   name="email"
-                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+                  className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
                   placeholder="jordan@email.com"
                 />
               </div>
@@ -198,7 +198,7 @@ function TrialModal({
                 <input
                   required
                   name="phone"
-                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+                  className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
                   placeholder="(555) 555-1234"
                 />
               </div>
@@ -208,7 +208,7 @@ function TrialModal({
                 </label>
                 <select
                   name="program"
-                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+                  className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
                 >
                   {programs.map((program) => (
                     <option key={program.slug} value={program.title}>
@@ -225,7 +225,7 @@ function TrialModal({
                   required
                   type="datetime-local"
                   name="datetime"
-                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+                  className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
                 />
               </div>
               <div className="md:col-span-2">

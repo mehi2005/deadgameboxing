@@ -8,7 +8,7 @@ import { programs } from "@/lib/data";
 export default function ProgramsPage() {
   return (
     <>
-      <section className="border-b border-ink/10 bg-fog/80 py-20">
+      <section className="border-b border-ink/10 bg-fog-soft/55 py-24">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6">
             <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
@@ -21,6 +21,15 @@ export default function ProgramsPage() {
               Choose from foundational skill training, youth development,
               competition prep, and performance conditioning.
             </p>
+            <div className="relative h-28 w-full max-w-sm overflow-hidden rounded-2xl border border-ink/10">
+              <Image
+                src="/images/dg-sparring-coach.jpg"
+                alt="Coach guiding a sparring session"
+                fill
+                sizes="(max-width: 1024px) 100vw, 30vw"
+                className="object-cover transition duration-700 hover:scale-105"
+              />
+            </div>
           </div>
           <ScrollReveal
             from="right"

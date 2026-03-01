@@ -31,20 +31,20 @@ export function SiteNav() {
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink/10 bg-fog/80 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+    <header className="sticky top-0 z-40 border-b border-ink/10 bg-fog/70 backdrop-blur-xl">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:py-5">
         <Link href="/" className="flex items-center gap-3">
-          <span className="relative h-11 w-11 overflow-hidden rounded-full border border-ember/60">
+          <span className="relative h-11 w-11 overflow-hidden rounded-full border border-ember/70">
             <Image
               src="/images/teamphoto14.webp"
-              alt="DeadGame Boxing logo"
+              alt="DeadGame Boxing"
               fill
               sizes="44px"
               className="object-cover object-center"
             />
           </span>
           <div>
-            <p className="text-lg font-display uppercase tracking-wide text-sand">
+            <p className="text-lg font-display uppercase tracking-wide text-ink">
               DeadGame
             </p>
             <p className="text-xs uppercase tracking-[0.3em] text-sand/60">
@@ -55,7 +55,7 @@ export function SiteNav() {
 
         <nav
           ref={navRef}
-          className="relative hidden items-center gap-6 text-xs uppercase tracking-[0.3em] text-sand/70 lg:flex"
+          className="relative hidden items-center gap-7 text-xs uppercase tracking-[0.32em] text-sand/70 lg:flex"
           onMouseLeave={() => {
             const underline = underlineRef.current;
             if (underline) {
@@ -100,7 +100,7 @@ export function SiteNav() {
           type="button"
           aria-label="Toggle menu"
           aria-expanded={isOpen}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 text-sand lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/20 text-sand lg:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <span className="text-lg">{isOpen ? "×" : "≡"}</span>
@@ -108,8 +108,8 @@ export function SiteNav() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-ink/10 bg-fog/90 lg:hidden">
-          <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-6 text-sm uppercase tracking-[0.25em] text-sand/70">
+        <div className="border-t border-ink/10 bg-fog-soft/95 lg:hidden">
+          <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-7 text-sm uppercase tracking-[0.28em] text-sand/70">
             {navLinks.map((link) => {
               const isActive =
                 link.href === "/"
@@ -121,7 +121,7 @@ export function SiteNav() {
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className={`transition hover:text-ink ${
-                    isActive ? "text-ink" : ""
+                    isActive ? "text-ember" : ""
                   }`}
                 >
                   {link.label}
