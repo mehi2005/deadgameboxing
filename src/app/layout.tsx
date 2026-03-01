@@ -35,9 +35,13 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body
         className={`${bebasNeue.variable} ${inter.variable} antialiased bg-fog text-ink`}
+        style={{
+          backgroundColor: "#05070c",
+          color: "#f5efe4",
+        }}
       >
         <TrialModalProvider>
-          <div className="min-h-screen bg-grid">
+          <div className="min-h-screen bg-grid" style={{ backgroundColor: "transparent" }}>
             <SiteNav />
             <main className="bg-transparent">{children}</main>
             <SiteFooter />

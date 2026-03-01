@@ -78,27 +78,29 @@ export function useTrialModal() {
   return context;
 }
 
-export function BookTrialButton({
-  className,
-  label = "Book a Free Trial",
-}: {
-  className?: string;
-  label?: string;
-}) {
-  const { open, isRedirecting } = useTrialModal();
-  return (
-    <button
-      type="button"
-      onClick={open}
-      disabled={isRedirecting}
-      aria-busy={isRedirecting}
-      className={
-        className
-          ? `${className} disabled:cursor-not-allowed disabled:opacity-70`
-          : "inline-flex items-center justify-center rounded-full bg-ember px-6 py-3 text-sm font-semibold uppercase tracking-widest text-white transition hover:bg-ember-dark disabled:cursor-not-allowed disabled:opacity-70"
-      }
-    >
-      {label}
+export function BookTrialButton({
+  className,
+  label = "Book a Free Trial",
+}: {
+  className?: string;
+  label?: string;
+}) {
+  const { open, isRedirecting } = useTrialModal();
+  const trialTone = "!bg-[#d9d9d9] hover:!bg-[#bfbfbf] !text-black";
+
+  return (
+    <button
+      type="button"
+      onClick={open}
+      disabled={isRedirecting}
+      aria-busy={isRedirecting}
+      className={
+        className
+          ? `${className} ${trialTone} disabled:cursor-not-allowed disabled:opacity-70`
+          : `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition ${trialTone} disabled:cursor-not-allowed disabled:opacity-70`
+      }
+    >
+      {label}
     </button>
   );
 }

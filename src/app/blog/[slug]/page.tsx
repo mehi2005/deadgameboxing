@@ -33,7 +33,7 @@ export default function BlogPostPage({ params }: PageProps) {
           </div>
           <Link
             href="/blog"
-            className="mt-8 inline-flex text-xs uppercase tracking-[0.35em] text-ember transition hover:text-gold"
+            className="mt-8 inline-flex text-xs uppercase tracking-[0.35em] text-ember transition hover:text-ink-soft"
           >
             Back to journal →
           </Link>

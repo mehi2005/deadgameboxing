@@ -5,7 +5,7 @@ export function CTASection() {
   return (
     <section className="py-20">
       <div className="mx-auto w-full max-w-6xl px-6">
-        <div className="relative overflow-hidden rounded-3xl border border-ember/45 bg-[radial-gradient(circle_at_top,_rgba(255,77,59,0.35),_rgba(8,10,15,0.96))] p-10 text-center shadow-2xl sm:p-12">
+        <div className="relative overflow-hidden rounded-3xl border border-ember/45 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.2),_rgba(8,8,8,0.96))] p-10 text-center shadow-2xl sm:p-12">
           <div className="absolute inset-0">
             <Image
               src="/images/teamphoto13.webp"
