@@ -2,16 +2,16 @@
 
 :root {
   color-scheme: dark;
-  --ink: #f5efe4;
-  --ink-soft: #e5d9c8;
-  --ash: #b9a88f;
-  --sand: #d0c1ad;
-  --fog: #090b10;
-  --fog-soft: #10141d;
-  --fog-lift: #171c27;
-  --ember: #ff4d3b;
-  --ember-dark: #bc231a;
-  --gold: #f2bd45;
+  --ink: #f2f2f2;
+  --ink-soft: #dadada;
+  --ash: #a6a6a6;
+  --sand: #bdbdbd;
+  --fog: #0b0b0b;
+  --fog-soft: #141414;
+  --fog-lift: #1f1f1f;
+  --ember: #d9d9d9;
+  --ember-dark: #bfbfbf;
+  --gold: #c9c9c9;
 }
 
 @theme inline {
@@ -35,11 +35,18 @@
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(255, 77, 59, 0.16), transparent 45%),
-    radial-gradient(circle at 85% 12%, rgba(242, 189, 69, 0.1), transparent 35%),
-    linear-gradient(180deg, #07090f 0%, #05070c 48%, #04060b 100%);
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent 45%),
+    radial-gradient(circle at 85% 12%, rgba(180, 180, 180, 0.08), transparent 35%),
+    linear-gradient(180deg, #0b0b0b 0%, #080808 48%, #060606 100%);
   color: var(--ink);
   font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Hard fallback so localhost and production stay dark even if utility generation fails. */
+html,
+body {
+  background-color: #080808 !important;
+  color: #f2f2f2 !important;
 }
 
 a {

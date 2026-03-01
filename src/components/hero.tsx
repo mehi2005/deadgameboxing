@@ -15,7 +15,7 @@ export function Hero() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/65 to-black/40" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,77,59,0.24),_transparent_58%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.16),_transparent_58%)]" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6">

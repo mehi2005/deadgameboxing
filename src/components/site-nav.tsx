@@ -134,7 +134,7 @@ export function SiteNav() {
                 open();
                 setIsOpen(false);
               }}
-              className="w-full rounded-full bg-ember px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-white"
+              className="w-full rounded-full bg-[#d9d9d9] px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-black transition hover:bg-[#bfbfbf]"
             >
               Book a Free Trial
             </button>
