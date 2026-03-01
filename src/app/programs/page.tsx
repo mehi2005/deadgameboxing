@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { CTASection } from "@/components/cta-section";
-import { ProgramCard } from "@/components/program-card";
+import { ProgramsGrid } from "@/components/programs-grid";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Section } from "@/components/section";
-import { programs } from "@/lib/data";
 
 export default function ProgramsPage() {
   return (
@@ -51,11 +50,7 @@ export default function ProgramsPage() {
         title="Find Your Track"
         description="Open the cards for program details, intensity, and class structure."
       >
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {programs.map((program) => (
-            <ProgramCard key={program.slug} program={program} />
-          ))}
-        </div>
+        <ProgramsGrid />
       </Section>
 
       <CTASection />
