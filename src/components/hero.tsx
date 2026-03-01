@@ -20,7 +20,7 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6">
         <div className="animate-fade-up flex max-w-3xl flex-col gap-7">
-          <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
+          <p className="text-xs uppercase tracking-[0.35em] text-ember">
             Eastside Boxing Gym
           </p>
           <h1 className="text-5xl font-display uppercase tracking-wide text-white sm:text-6xl">
@@ -64,3 +64,4 @@ export function Hero() {
     </section>
   );
 }
+

@@ -10,10 +10,11 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         <span className="text-sm font-semibold text-ink">
           {testimonial.name}
         </span>
-        <span className="text-xs uppercase tracking-[0.25em] text-ember/80">
+        <span className="text-xs uppercase tracking-[0.25em] text-ember">
           {testimonial.program}
         </span>
       </div>
     </div>
   );
 }
+

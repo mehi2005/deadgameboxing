@@ -36,20 +36,17 @@ export function ProgramsSwitcher({ items = allPrograms }: { items?: Program[] })
           );
         })}
       </div>
-      <div className="surface-card flex flex-col gap-4 rounded-3xl p-6 md:p-8">
+      <div className="flex flex-col gap-4 rounded-3xl border border-ink/10 bg-white/95 p-6 md:p-8">
         {activeProgram.level ? (
-          <p className="text-xs uppercase tracking-[0.3em] text-ember/80">
+          <p className="text-xs uppercase tracking-[0.3em] text-ember">
             {activeProgram.level}
           </p>
         ) : null}
-        <h3
-          className="text-3xl font-display uppercase tracking-wide"
-          style={{ color: "var(--ember)" }}
-        >
+        <h3 className="text-3xl font-display uppercase tracking-wide text-fog">
           {activeProgram.title}
         </h3>
         {activeProgram.duration || activeProgram.intensity ? (
-          <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.2em] text-sand/50">
+          <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.2em] text-fog/60">
             {activeProgram.duration ? (
               <span>{activeProgram.duration}</span>
             ) : null}
@@ -59,12 +56,12 @@ export function ProgramsSwitcher({ items = allPrograms }: { items?: Program[] })
           </div>
         ) : null}
         {activeProgram.description ? (
-          <p className="text-lg text-sand/70">
+          <p className="text-lg text-fog/80">
             {activeProgram.description}
           </p>
         ) : null}
         {activeProgram.details.length ? (
-          <ul className="flex list-disc flex-col gap-2 pl-5 text-sm text-sand/70">
+          <ul className="flex list-disc flex-col gap-2 pl-5 text-sm text-fog/80">
             {activeProgram.details.map((detail) => (
               <li key={detail}>{detail}</li>
             ))}
@@ -115,7 +112,29 @@ export function ProgramsSwitcher({ items = allPrograms }: { items?: Program[] })
             />
           </div>
         ) : null}
-        {activeProgram.slug === "basic-membership" ? (
+        {activeProgram.slug === "1-day-drop-in" ? (
+          <div className="relative mt-4 h-104 w-full overflow-hidden rounded-2xl border border-ink/10 md:h-128">
+            <Image
+              src="/images/dg-logo-wall.jpg"
+              alt="DeadGame Boxing logo wall"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover"
+            />
+          </div>
+        ) : null}
+        {activeProgram.slug === "platinum-membership" ? (
+          <div className="relative mt-4 h-104 w-full overflow-hidden rounded-2xl border border-ink/10 md:h-128">
+            <Image
+              src="/images/dg-logo-wall.jpg"
+              alt="DeadGame Boxing logo wall"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover"
+            />
+          </div>
+        ) : null}
+        {activeProgram.slug === "mitt-session-package" ? (
           <div className="relative mt-4 h-104 w-full overflow-hidden rounded-2xl border border-ink/10 md:h-128">
             <Image
               src="/images/dg-logo-wall.jpg"
@@ -141,7 +160,7 @@ export function ProgramsSwitcher({ items = allPrograms }: { items?: Program[] })
           href="https://app.glofox.com/portal/#/branch/655bc43c75c5896148078ec1/memberships"
           target="_blank"
           rel="noreferrer"
-          className="mt-2 inline-flex w-fit items-center justify-center rounded-full border border-ember/50 px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-ember transition hover:bg-ember hover:text-white"
+          className="mt-2 inline-flex w-fit items-center justify-center rounded-full bg-fog px-7 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-fog/90"
         >
           Book
         </a>
@@ -149,3 +168,4 @@ export function ProgramsSwitcher({ items = allPrograms }: { items?: Program[] })
     </div>
   );
 }
+

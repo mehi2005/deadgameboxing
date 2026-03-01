@@ -57,7 +57,7 @@ export function CoachCard({ coach }: { coach: Coach }) {
           <h3 className="text-xl font-display uppercase tracking-wide text-ink">
             {coach.name}
           </h3>
-          <p className="text-xs uppercase tracking-[0.25em] text-ember/80">
+          <p className="text-xs uppercase tracking-[0.25em] text-ember">
             {coach.role}
           </p>
         </div>
@@ -99,7 +99,7 @@ export function CoachCard({ coach }: { coach: Coach }) {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-xs uppercase tracking-[0.25em] text-ember/80">
+                <p className="text-xs uppercase tracking-[0.25em] text-ember">
                   {coach.role}
                 </p>
                 <h3 className="mt-2 text-3xl font-display uppercase tracking-wide text-ink">
@@ -137,3 +137,4 @@ export function CoachCard({ coach }: { coach: Coach }) {
     </>
   );
 }
+

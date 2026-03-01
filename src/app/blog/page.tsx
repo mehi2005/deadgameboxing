@@ -18,7 +18,7 @@ export default function BlogPage() {
               href={`/blog/${post.slug}`}
               className="surface-card hover-lift rounded-3xl p-6"
             >
-              <p className="text-xs uppercase tracking-[0.3em] text-ember/80">
+              <p className="text-xs uppercase tracking-[0.3em] text-ember">
                 {post.category}
               </p>
               <h3 className="mt-3 text-2xl font-display uppercase tracking-wide text-ink">
@@ -37,3 +37,4 @@ export default function BlogPage() {
     </>
   );
 }
+
