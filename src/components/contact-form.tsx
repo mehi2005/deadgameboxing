@@ -85,7 +85,7 @@ export function ContactForm() {
       </div>
       <button
         type="submit"
-        className="rounded-full bg-ember px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-ember-dark"
+        className="rounded-full bg-ember px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-black transition hover:bg-ember-dark"
       >
         Send message
       </button>

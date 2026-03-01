@@ -1,18 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/cta-section";
-import { CoachCard } from "@/components/coach-card";
 import { FacilityPhotoGrid } from "@/components/facility-photo-grid";
 import { FAQPhoto } from "@/components/faq-photo";
 import { Hero } from "@/components/hero";
 import { InstagramEmbed } from "@/components/instagram-embed";
-import { RotatingImage } from "@/components/rotating-image";
+import { ScrollAutoplayVideo } from "@/components/scroll-autoplay-video";
 import { SchedulePhoto } from "@/components/schedule-photo";
 import { ScheduleTable } from "@/components/schedule-table";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Section } from "@/components/section";
 import { TestimonialCard } from "@/components/testimonial-card";
-import { coaches, faqs, schedule, testimonials } from "@/lib/data";
+import { faqs, schedule, testimonials } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -49,8 +48,8 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-            <div className="relative h-[520px] w-full max-w-[360px] place-self-center overflow-hidden rounded-md border border-ink/10 bg-white shadow-lg lg:h-[624px] lg:max-w-[432px]">
+          <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
+            <div className="relative h-[520px] w-full max-w-[360px] place-self-start overflow-hidden rounded-md border border-ink/10 bg-white shadow-lg lg:h-[624px] lg:max-w-[432px]">
               <Image
                 src="/images/dg-flyer-march.jpg"
                 alt="Dead Game Boxing flyer"
@@ -60,18 +59,11 @@ export default function Home() {
               />
             </div>
 
-            <div className="relative h-[520px] w-full max-w-[360px] place-self-center overflow-hidden rounded-md border border-ink/10 lg:h-[624px] lg:max-w-[432px]">
-              <RotatingImage
-                images={[
-                  "/images/dg-coach-talk.jpg",
-                  "/images/teamphoto1.webp",
-                  "/images/teamphoto10.webp",
-                  "/images/teamphoto11.webp",
-                ]}
-                alt="DeadGame Boxing team training"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-top"
-                intervalMs={5000}
+            <div className="relative h-[520px] w-full max-w-[760px] place-self-start overflow-hidden rounded-md border border-ink/10 bg-black lg:h-[624px] lg:max-w-none">
+              <ScrollAutoplayVideo
+                src="/videos/sequence-02.MOV"
+                poster="/images/dg-coach-talk.jpg"
+                className="h-full w-full object-contain"
               />
             </div>
           </div>
@@ -113,20 +105,6 @@ export default function Home() {
             <div className="flex w-full justify-center">
               <InstagramEmbed permalink="https://www.instagram.com/reel/C5ijnC4OEZ3/?utm_source=ig_embed&utm_campaign=loading" />
             </div>
-          </div>
-        </Section>
-      </ScrollReveal>
-
-      <ScrollReveal from="fade" threshold={0.14}>
-        <Section
-          eyebrow="Coaches"
-          title="Meet the Crew"
-          description="Our coaching team blends competitive experience with a tactical, data-driven approach."
-        >
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {coaches.map((coach) => (
-              <CoachCard key={coach.name} coach={coach} />
-            ))}
           </div>
         </Section>
       </ScrollReveal>
