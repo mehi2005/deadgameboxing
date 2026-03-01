@@ -41,7 +41,7 @@ export function FacilityPhotoGrid() {
           alt="DeadGame Boxing team"
           width={700}
           height={900}
-          className="h-full w-full object-cover object-top"
+          className="h-full w-full object-cover object-top transition duration-700 hover:scale-105"
         />
       </div>
       <div
@@ -54,7 +54,7 @@ export function FacilityPhotoGrid() {
           alt="DeadGame Boxing team"
           width={700}
           height={900}
-          className="h-full w-full object-cover object-top"
+          className="h-full w-full object-cover object-top transition duration-700 hover:scale-105"
         />
       </div>
       <div
@@ -67,7 +67,7 @@ export function FacilityPhotoGrid() {
           alt="DeadGame Boxing team"
           width={1200}
           height={675}
-          className="h-full w-full object-contain bg-white"
+          className="h-full w-full object-cover transition duration-700 hover:scale-[1.03]"
         />
       </div>
     </div>

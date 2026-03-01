@@ -25,7 +25,7 @@ export default function BlogPostPage({ params }: PageProps) {
         title={post.title}
         description={post.date}
       >
-        <div className="rounded-3xl border border-ink/10 bg-fog/80 p-8 text-sm text-sand/70">
+        <div className="surface-card rounded-3xl p-8 text-sm text-sand/74">
           <div className="flex flex-col gap-5">
             {post.content.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
@@ -33,7 +33,7 @@ export default function BlogPostPage({ params }: PageProps) {
           </div>
           <Link
             href="/blog"
-            className="mt-8 inline-flex text-xs uppercase tracking-[0.35em] text-ember"
+            className="mt-8 inline-flex text-xs uppercase tracking-[0.35em] text-ember transition hover:text-gold"
           >
             Back to journal →
           </Link>

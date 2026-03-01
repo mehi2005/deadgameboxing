@@ -19,30 +19,30 @@ export function Section({
   contentClassName,
 }: SectionProps) {
   return (
-    <section id={id} className={`py-20 ${className ?? ""}`.trim()}>
+    <section id={id} className={`py-24 sm:py-28 ${className ?? ""}`.trim()}>
       <div
         className={`mx-auto w-full max-w-6xl px-6 ${
           contentClassName ?? ""
         }`.trim()}
       >
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-5">
           {eyebrow ? (
-            <span className="text-xs uppercase tracking-[0.35em] text-ember">
+            <span className="text-xs uppercase tracking-[0.4em] text-ember/90">
               {eyebrow}
             </span>
           ) : null}
-          <div className="flex flex-col gap-3">
-            <h2 className="text-4xl font-display uppercase tracking-wide text-sand sm:text-5xl">
+          <div className="flex flex-col gap-4">
+            <h2 className="max-w-4xl text-5xl font-display uppercase tracking-wide text-ink sm:text-6xl">
               {title}
             </h2>
             {description ? (
-              <p className="max-w-2xl text-base text-sand/70 sm:text-lg">
+              <p className="max-w-3xl text-base leading-relaxed text-sand/78 sm:text-lg">
                 {description}
               </p>
             ) : null}
           </div>
         </div>
-        {children ? <div className="mt-12">{children}</div> : null}
+        {children ? <div className="mt-14 sm:mt-16">{children}</div> : null}
       </div>
     </section>
   );

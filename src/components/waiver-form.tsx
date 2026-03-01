@@ -9,20 +9,20 @@ export function WaiverForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-3xl border border-ink/10 bg-fog/80 p-8 text-center">
+      <div className="surface-card rounded-3xl p-8 text-center">
         <p className="text-xs uppercase tracking-[0.35em] text-ember">
           Waiver received
         </p>
-        <h3 className="mt-4 text-3xl font-display uppercase tracking-wide text-sand">
+        <h3 className="mt-4 text-3xl font-display uppercase tracking-wide text-ink">
           Thanks for signing
         </h3>
-        <p className="mt-3 text-sm text-sand/70">
+        <p className="mt-3 text-sm text-sand/74">
           This is a front-end confirmation only. We will contact you if any
           details are missing.
         </p>
         <button
           type="button"
-          className="mt-6 rounded-full border border-ink/20 px-6 py-3 text-xs uppercase tracking-[0.3em] text-sand/70"
+          className="mt-6 rounded-full border border-ink/20 px-6 py-3 text-xs uppercase tracking-[0.3em] text-sand/74 transition hover:border-ember/60 hover:text-ink"
           onClick={() => setSubmitted(false)}
         >
           Submit another
@@ -33,7 +33,7 @@ export function WaiverForm() {
 
   return (
     <form
-      className="grid gap-6 rounded-3xl border border-ink/10 bg-fog/80 p-8"
+      className="surface-card grid gap-6 rounded-3xl p-8"
       onSubmit={(event) => {
         event.preventDefault();
         setSubmitted(true);
@@ -47,7 +47,7 @@ export function WaiverForm() {
           <input
             required
             name="participantName"
-            className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+            className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
             placeholder="Jordan Hayes"
           />
         </div>
@@ -59,7 +59,7 @@ export function WaiverForm() {
             required
             type="date"
             name="dob"
-            className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+            className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
           />
         </div>
       </div>
@@ -73,7 +73,7 @@ export function WaiverForm() {
             required
             type="email"
             name="email"
-            className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+            className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
             placeholder="jordan@email.com"
           />
         </div>
@@ -84,7 +84,7 @@ export function WaiverForm() {
           <input
             required
             name="phone"
-            className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+            className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
             placeholder="(555) 555-1234"
           />
         </div>
@@ -96,7 +96,7 @@ export function WaiverForm() {
         </label>
         <input
           name="address"
-          className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+          className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
           placeholder="Street, City, State, ZIP"
         />
       </div>
@@ -109,7 +109,7 @@ export function WaiverForm() {
           <input
             required
             name="emergencyContact"
-            className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+            className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
             placeholder="Alex Rivera"
           />
         </div>
@@ -120,13 +120,13 @@ export function WaiverForm() {
           <input
             required
             name="emergencyPhone"
-            className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+            className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
             placeholder="(555) 555-9876"
           />
         </div>
       </div>
 
-      <div className="rounded-2xl border border-ink/10 bg-fog/60 p-4 text-sm text-sand/70">
+      <div className="rounded-2xl border border-ink/10 bg-fog-lift/70 p-4 text-sm text-sand/74">
         <label className="flex items-start gap-3">
           <input
             type="checkbox"
@@ -147,7 +147,7 @@ export function WaiverForm() {
             <input
               required
               name="guardianName"
-              className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+              className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
               placeholder="Casey Hayes"
             />
           </div>
@@ -158,7 +158,7 @@ export function WaiverForm() {
             <input
               required
               name="guardianRelationship"
-              className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+              className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
               placeholder="Parent / Guardian"
             />
           </div>
@@ -169,7 +169,7 @@ export function WaiverForm() {
             <input
               required
               name="guardianPhone"
-              className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+              className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
               placeholder="(555) 555-4321"
             />
           </div>
@@ -181,14 +181,14 @@ export function WaiverForm() {
               required
               type="email"
               name="guardianEmail"
-              className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+              className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
               placeholder="guardian@email.com"
             />
           </div>
         </div>
       ) : null}
 
-      <div className="grid gap-4 rounded-2xl border border-ink/10 bg-fog/60 p-5 text-sm text-sand/70">
+      <div className="grid gap-4 rounded-2xl border border-ink/10 bg-fog-lift/70 p-5 text-sm text-sand/74">
         <label className="flex items-start gap-3">
           <input
             required
@@ -223,7 +223,7 @@ export function WaiverForm() {
           <input
             required
             name="signature"
-            className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-lg font-display uppercase tracking-wide text-ink outline-none transition focus:border-ember"
+            className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-lg font-display uppercase tracking-wide text-ink outline-none transition focus:border-ember"
             placeholder="Jordan Hayes"
           />
         </div>
@@ -236,14 +236,14 @@ export function WaiverForm() {
             type="date"
             name="signatureDate"
             defaultValue={today}
-            className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
+            className="rounded-2xl border border-ink/10 bg-fog-lift/70 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
           />
         </div>
       </div>
 
       <button
         type="submit"
-        className="rounded-full bg-ember px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-white"
+        className="rounded-full bg-ember px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-ember-dark"
       >
         Submit waiver
       </button>

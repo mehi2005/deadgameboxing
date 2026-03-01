@@ -36,7 +36,7 @@ export function FAQPhoto() {
         alt="DeadGame Boxing team"
         width={760}
         height={980}
-        className="h-auto w-full object-cover object-top"
+        className="h-auto w-full object-cover object-top transition duration-700 hover:scale-105"
       />
     </div>
   );
