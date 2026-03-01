@@ -16,20 +16,20 @@ export default function ContactPage() {
           <div className="grid">
             <div className="surface-card flex flex-col gap-4 rounded-3xl p-5 text-sm text-sand/72">
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-ember/80">
+                <p className="text-xs uppercase tracking-[0.3em] text-ember">
                   Gym Location
                 </p>
                 <p className="mt-1.5 text-base text-ink-soft">{siteInfo.address}</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-ember/80">
+                <p className="text-xs uppercase tracking-[0.3em] text-ember">
                   Contact
                 </p>
                 <p className="mt-1.5">{siteInfo.phone}</p>
                 <p>{siteInfo.email}</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-ember/80">
+                <p className="text-xs uppercase tracking-[0.3em] text-ember">
                   Hours
                 </p>
                 <div className="mt-2 flex flex-col gap-2">
@@ -61,3 +61,4 @@ export default function ContactPage() {
     </>
   );
 }
+

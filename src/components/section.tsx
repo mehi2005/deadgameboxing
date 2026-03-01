@@ -27,7 +27,7 @@ export function Section({
       >
         <div className="flex flex-col gap-5">
           {eyebrow ? (
-            <span className="text-xs uppercase tracking-[0.4em] text-ember/90">
+            <span className="text-xs uppercase tracking-[0.4em] text-ember">
               {eyebrow}
             </span>
           ) : null}
@@ -47,3 +47,4 @@ export function Section({
     </section>
   );
 }
+

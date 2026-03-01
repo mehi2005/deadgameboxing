@@ -13,7 +13,7 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
       }`}
     >
       <div className="flex items-center justify-between">
-        <p className="text-xs uppercase tracking-[0.3em] text-ember/80">
+        <p className="text-xs uppercase tracking-[0.3em] text-ember">
           {tier.name}
         </p>
         {tier.highlight ? (
@@ -42,3 +42,4 @@ export function PricingCard({ tier }: { tier: PricingTier }) {
     </div>
   );
 }
+

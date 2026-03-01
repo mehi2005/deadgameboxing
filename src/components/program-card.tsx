@@ -13,7 +13,7 @@ export function ProgramCard({ program }: { program: Program }) {
       <div className="flex items-center justify-between">
         <div>
           {program.level ? (
-            <p className="text-xs uppercase tracking-[0.3em] text-ember/80">
+            <p className="text-xs uppercase tracking-[0.3em] text-ember">
               {program.level}
             </p>
           ) : null}
@@ -67,3 +67,4 @@ export function ProgramCard({ program }: { program: Program }) {
     </div>
   );
 }
+

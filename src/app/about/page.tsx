@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section className="border-b border-ink/10 bg-fog-soft/55 py-24">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6">
-            <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
+            <p className="text-xs uppercase tracking-[0.35em] text-ember">
               About
             </p>
             <h1 className="text-5xl font-display uppercase tracking-wide text-ink">
@@ -79,7 +79,7 @@ export default function AboutPage() {
         <div className="grid gap-8 md:grid-cols-[1.1fr_1.2fr] md:items-center">
           <div className="grid gap-5">
             <div className="rounded-3xl border border-ink/10 bg-fog/80 p-6">
-              <p className="text-xs uppercase tracking-[0.35em] text-ember/80">
+              <p className="text-xs uppercase tracking-[0.35em] text-ember">
                 Address
               </p>
               <p className="mt-3 text-lg text-sand">

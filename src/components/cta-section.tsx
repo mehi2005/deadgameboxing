@@ -16,7 +16,7 @@ export function CTASection() {
             />
             <div className="absolute inset-0 bg-black/55" />
           </div>
-          <p className="relative z-10 text-xs uppercase tracking-[0.35em] text-ember/90">
+          <p className="relative z-10 text-xs uppercase tracking-[0.35em] text-ember">
             Ready to Train
           </p>
           <h3 className="relative z-10 mt-4 text-4xl font-display uppercase tracking-wide text-white">
@@ -34,3 +34,4 @@ export function CTASection() {
     </section>
   );
 }
+
