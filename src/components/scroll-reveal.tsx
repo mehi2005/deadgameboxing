@@ -45,7 +45,9 @@ export function ScrollReveal({
       ? "translate-x-6"
       : from === "left"
         ? "-translate-x-6"
-        : "";
+        : from === "fade"
+          ? "translate-y-4"
+          : "";
 
   const transitionStyle = {
     transitionDuration: `${durationMs}ms`,
@@ -59,7 +61,11 @@ export function ScrollReveal({
         from === "none"
           ? ""
           : `transition-all ease-out motion-reduce:transition-none ${
-              isVisible ? "translate-x-0 opacity-100" : `${hiddenTranslate} opacity-0`
+              isVisible
+                ? from === "fade"
+                  ? "translate-y-0 opacity-100"
+                  : "translate-x-0 opacity-100"
+                : `${hiddenTranslate} opacity-0`
             }`
       } ${className ?? ""}`.trim()}
       style={from === "none" ? undefined : transitionStyle}

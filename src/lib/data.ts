@@ -155,31 +155,52 @@ export const programs = [
 
 export const coaches = [
   {
-    name: "Gabe Benavides",
-    role: "Coach",
-    image: "/images/coach-rafael.svg",
-    bio: "Competition-minded coach focused on sharp fundamentals and ring IQ.",
+    name: "Gabriel Benavides",
+    role: "Head Kids Boxing Coach",
+    image: "/images/dg-ring-instruction.jpg",
+    bio: "Gabriel is the head boxing coach for our kids program and an open class boxer. He has competed for more than six years across nearly every major region of Texas. He trains both competitors and everyday clients who want to learn boxing and get in top shape.",
+    longBio: [
+      "Gabriel is the head boxing coach for our kids program and an open class boxer.",
+      "Gabriel has competed as a boxer for over six years in nearly every major region of Texas.",
+      "In addition to competing, Gabriel trains competitors and people looking to learn and get in shape through boxing.",
+      "Despite his age, Gabriel's skills are comparable to even the most experienced coaches and fighters.",
+    ],
     specialties: ["Fundamentals", "Combinations", "Defense"],
   },
   {
     name: "Jacob Acuna",
-    role: "Coach",
-    image: "/images/coach-naomi.svg",
-    bio: "Patient, detail-driven coaching with a focus on technique and timing.",
+    role: "Assistant Boxing Coach",
+    image: "/images/JACOB.jpg",
+    bio: "Jacob Acuna is an assistant boxing coach for the competition team who brings real amateur ring experience from novice through open-class divisions. He is also a certified strength and conditioning coach with more than 10 years of strength-training experience. His coaching combines boxing mechanics, athletic development, and sustainable habits for athletes and everyday clients.",
+    longBio: [
+      "Jacob Acuna is an assistant boxing coach for the Dead Game Boxing competition team, working under Coach Ricco and alongside Coach Gabe in the youth program. He competed as an amateur boxer from the novice ranks through the open-class division, bringing real ring experience to every athlete he trains.",
+      "Jacob is also a certified strength and conditioning coach with over 10 years of strength-training experience. His coaching blends proper boxing mechanics, athletic development, and sustainable lifestyle habits to help clients become the strongest version of themselves.",
+      "Whether your goal is to compete in tournaments, build muscle, lose fat, or simply get into the best shape of your life, Jacob brings the same level of dedication he expects from his athletes. If you are willing to put in the work, he is committed to helping you achieve it.",
+    ],
     specialties: ["Footwork", "Timing", "Ring movement"],
   },
   {
     name: "Ricco Spencer",
-    role: "Coach",
-    image: "/images/coach-malik.svg",
-    bio: "High-energy sessions that build pace, endurance, and clean mechanics.",
+    role: "Head Boxing Coach",
+    image: "/images/RICCO.jpg",
+    bio: "Coach Ricco is the head boxing coach and a former amateur state champion with over 15 years in USA Boxing. He has coached athletes from their first bout to advanced competitors with 70+ fights while traveling nationwide to major tournaments. His approach emphasizes fundamentals, disciplined technique, and confidence-building so athletes perform at their best in and out of the ring.",
+    longBio: [
+      "Coach Ricco is the head boxing coach of the gym, bringing real ring experience as a former amateur state champion with over 15 years in USA Boxing. He has coached athletes from their very first fight all the way to seasoned competitors with 70+ bouts, traveling across the United States to national tournaments and bringing home multiple championship belts. His experience also extends into the professional ranks, having traveled the country to corner and support pro fighters.",
+      "Ricco is known for his commitment to strong fundamentals, disciplined technique, and extreme attention to detail. He refuses to let athletes cut corners, ensuring they develop sharp skills, real confidence, and the mindset required to perform at their best.",
+      "At the core of his coaching philosophy is one simple truth: boxing should be fun. Ricco does not just build strong athletes - he builds strong people. His goal is to help every client develop the mental toughness and self-belief they need to attack life with the same intensity they bring to the ring.",
+    ],
     specialties: ["Storm Fitness", "Bag work", "Pace"],
   },
   {
     name: "Storm Cosby",
     role: "Coach",
     image: "/images/coach-malik.svg",
-    bio: "Strength-first training that translates to sharper, faster rounds.",
+    bio: "Storm leads high-energy strength and conditioning sessions built for boxing performance. His training focuses on explosiveness, stamina, and recovery so athletes can handle harder rounds with better output. He pushes consistency and discipline so clients develop habits that carry into every class.",
+    longBio: [
+      "Storm leads high-energy strength and conditioning sessions built for boxing performance.",
+      "His training focuses on explosiveness, stamina, and recovery so athletes can handle harder rounds with better output.",
+      "He pushes consistency and discipline so clients develop habits that carry into every class.",
+    ],
     specialties: ["Strength", "Explosiveness", "Recovery"],
   },
 ];
