@@ -6,12 +6,10 @@ import { FAQPhoto } from "@/components/faq-photo";
 import { Hero } from "@/components/hero";
 import { InstagramEmbed } from "@/components/instagram-embed";
 import { ScrollAutoplayVideo } from "@/components/scroll-autoplay-video";
-import { SchedulePhoto } from "@/components/schedule-photo";
-import { ScheduleTable } from "@/components/schedule-table";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Section } from "@/components/section";
 import { TestimonialCard } from "@/components/testimonial-card";
-import { faqs, schedule, testimonials } from "@/lib/data";
+import { faqs, testimonials } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -111,47 +109,13 @@ export default function Home() {
 
       <ScrollReveal from="fade" threshold={0.14}>
         <Section
-          eyebrow="Schedule"
-          title="Weekly Training Flow"
-          description="Choose from morning conditioning, midday skill work, and evening fight prep."
-          className="bg-fog/80"
-          contentClassName="max-w-[1400px]"
-        >
-          <div className="grid gap-10 lg:grid-cols-[0.75fr_1.5fr_0.75fr] lg:items-start">
-            <SchedulePhoto
-              src="/images/teamphoto9.webp"
-              alt="DeadGame Boxing training"
-              from="left"
-              className="order-2 lg:order-1"
-            />
-
-            <div className="order-1 lg:order-2 lg:max-w-[720px] lg:justify-self-center">
-              <ScheduleTable items={schedule.slice(0, 6)} />
-              <div className="mt-8">
-                <Link
-                  href="/schedule"
-                  className="text-xs uppercase tracking-[0.35em] text-ember"
-                >
-                  View full schedule
-                </Link>
-              </div>
-            </div>
-
-            <SchedulePhoto
-              src="/images/teamphoto4.webp"
-              alt="DeadGame Boxing training floor"
-              from="left"
-              className="order-3"
-            />
-          </div>
-        </Section>
-      </ScrollReveal>
-
-      <ScrollReveal from="fade" threshold={0.14}>
-        <Section
           eyebrow="Testimonials"
           title="Athletes Who Train Here"
           description="From first timers to competitors, our members keep showing up for one reason: results."
+          className="border-y border-black/10 bg-white"
+          eyebrowClassName="!text-black"
+          titleClassName="!text-black"
+          descriptionClassName="!text-black"
         >
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
