@@ -5,11 +5,16 @@ import { Section } from "@/components/section";
 import { BookTrialButton } from "@/components/trial-modal-context";
 
 const offerings = [
-  "Boxing Fundamentals",
-  "Youth Boxing",
-  "Competition Team",
-  "Conditioning",
-  "Private Training",
+  "Kids Boxing Academy",
+  "1 Day Drop-In",
+  "Competition Boxing Membership",
+  "Storm Fitness",
+  "1 on 1 Personal Training Package",
+  "Basic Membership",
+  "Gold Membership",
+  "Platinum Membership",
+  "Fight Ready Fitness Training Camp",
+  "Mitt Session Package",
 ];
 
 const trainers = [

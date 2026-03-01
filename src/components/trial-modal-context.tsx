@@ -1,60 +1,71 @@
 "use client";
 
-import Link from "next/link";
 import {
   createContext,
   useCallback,
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
-import { programs } from "@/lib/data";
 
 type TrialModalContextValue = {
   open: () => void;
   close: () => void;
+  isRedirecting: boolean;
 };
 
 const TrialModalContext = createContext<TrialModalContextValue | null>(null);
+
+const TRIAL_REDIRECT_URL =
+  "https://app.glofox.com/portal/#/branch/655bc43c75c5896148078ec1/memberships";
+const TRIAL_REDIRECT_DELAY_MS = 1000;
 
 export function TrialModalProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [isRedirecting, setIsRedirecting] = useState(false);
+  const redirectTimeout = useRef<number | null>(null);
+  const isRedirectingRef = useRef(false);
 
   const open = useCallback(() => {
-    setSubmitted(false);
-    setIsOpen(true);
+    if (isRedirectingRef.current) return;
+    isRedirectingRef.current = true;
+    setIsRedirecting(true);
+    redirectTimeout.current = window.setTimeout(() => {
+      window.location.href = TRIAL_REDIRECT_URL;
+    }, TRIAL_REDIRECT_DELAY_MS);
   }, []);
 
-  const close = useCallback(() => setIsOpen(false), []);
+  const close = useCallback(() => {
+    if (redirectTimeout.current) {
+      window.clearTimeout(redirectTimeout.current);
+      redirectTimeout.current = null;
+    }
+    isRedirectingRef.current = false;
+    setIsRedirecting(false);
+  }, []);
 
-  const value = useMemo(() => ({ open, close }), [open, close]);
+  const value = useMemo(
+    () => ({ open, close, isRedirecting }),
+    [open, close, isRedirecting]
+  );
 
   useEffect(() => {
-    if (!isOpen) return;
-    const handleKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        close();
+    return () => {
+      if (redirectTimeout.current) {
+        window.clearTimeout(redirectTimeout.current);
       }
     };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [isOpen, close]);
+  }, []);
 
   return (
     <TrialModalContext.Provider value={value}>
       {children}
-      <TrialModal
-        isOpen={isOpen}
-        submitted={submitted}
-        onClose={close}
-        onSubmit={() => setSubmitted(true)}
-      />
+      <TrialRedirectOverlay isOpen={isRedirecting} />
     </TrialModalContext.Provider>
   );
 }
@@ -74,14 +85,17 @@ export function BookTrialButton({
   className?: string;
   label?: string;
 }) {
-  const { open } = useTrialModal();
+  const { open, isRedirecting } = useTrialModal();
   return (
     <button
       type="button"
       onClick={open}
+      disabled={isRedirecting}
+      aria-busy={isRedirecting}
       className={
-        className ??
-        "inline-flex items-center justify-center rounded-full bg-ember px-6 py-3 text-sm font-semibold uppercase tracking-widest text-white transition hover:bg-ember-dark"
+        className
+          ? `${className} disabled:cursor-not-allowed disabled:opacity-70`
+          : "inline-flex items-center justify-center rounded-full bg-ember px-6 py-3 text-sm font-semibold uppercase tracking-widest text-white transition hover:bg-ember-dark disabled:cursor-not-allowed disabled:opacity-70"
       }
     >
       {label}
@@ -89,159 +103,30 @@ export function BookTrialButton({
   );
 }
 
-function TrialModal({
-  isOpen,
-  submitted,
-  onClose,
-  onSubmit,
-}: {
-  isOpen: boolean;
-  submitted: boolean;
-  onClose: () => void;
-  onSubmit: () => void;
-}) {
+function TrialRedirectOverlay({ isOpen }: { isOpen: boolean }) {
   if (!isOpen) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:items-center sm:py-10"
-      onClick={onClose}
-    >
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
       <div
-        role="dialog"
-        aria-modal="true"
-        className="glass relative w-full max-w-2xl rounded-3xl p-6 text-sand shadow-2xl sm:p-8"
-        onClick={(event) => event.stopPropagation()}
+        role="status"
+        aria-live="polite"
+        className="glass w-full max-w-md rounded-3xl border border-ember/30 bg-black/70 p-10 text-center text-sand shadow-2xl"
       >
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close modal"
-          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 text-sm uppercase tracking-[0.2em] text-sand/70 transition hover:text-ink"
-        >
-          X
-        </button>
-        <div className="max-h-[75vh] overflow-y-auto pr-1 sm:max-h-[80vh]">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-ember">
-              Free Trial
-            </p>
-            <h3 className="mt-3 text-3xl font-display uppercase tracking-wide">
-              Book Your First Session
-            </h3>
-            <p className="mt-2 text-sm text-sand/70">
-              Tell us what you want to train and we will confirm your spot.
-            </p>
-            <p className="mt-2 text-sm text-ember/90">
-              Please complete the{" "}
-              <Link href="/waiver" className="underline underline-offset-4">
-                waiver
-              </Link>{" "}
-              before arriving.
-            </p>
-          </div>
-
-          {submitted ? (
-            <div className="mt-10 rounded-2xl border border-ink/10 bg-ink/5 p-8 text-center">
-              <p className="text-sm uppercase tracking-[0.4em] text-ember">
-                Submission received
-              </p>
-              <h4 className="mt-4 text-2xl font-display uppercase tracking-wide">
-                You are on the roster.
-              </h4>
-              <p className="mt-3 text-sm text-sand/70">
-                A coach will reach out within 24 hours to confirm your session.
-              </p>
-              <button
-                type="button"
-                onClick={onClose}
-                className="mt-6 inline-flex items-center justify-center rounded-full bg-ember px-6 py-3 text-xs font-semibold uppercase tracking-widest text-white"
-              >
-                Done
-              </button>
-            </div>
-          ) : (
-            <form
-              className="mt-10 grid gap-5 md:grid-cols-2"
-              onSubmit={(event) => {
-                event.preventDefault();
-                onSubmit();
-              }}
-            >
-              <div className="flex flex-col gap-2">
-                <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
-                  Full name
-                </label>
-                <input
-                  required
-                  name="name"
-                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
-                  placeholder="Jordan Hayes"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
-                  Email
-                </label>
-                <input
-                  required
-                  type="email"
-                  name="email"
-                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
-                  placeholder="jordan@email.com"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
-                  Phone
-                </label>
-                <input
-                  required
-                  name="phone"
-                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
-                  placeholder="(555) 555-1234"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
-                  Preferred program
-                </label>
-                <select
-                  name="program"
-                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
-                >
-                  {programs.map((program) => (
-                    <option key={program.slug} value={program.title}>
-                      {program.title}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="flex flex-col gap-2 md:col-span-2">
-                <label className="text-xs uppercase tracking-[0.25em] text-sand/60">
-                  Preferred date + time
-                </label>
-                <input
-                  required
-                  type="datetime-local"
-                  name="datetime"
-                  className="rounded-2xl border border-ink/10 bg-fog/60 px-4 py-3 text-sm text-ink outline-none transition focus:border-ember"
-                />
-              </div>
-              <div className="md:col-span-2">
-                <button
-                  type="submit"
-                  className="w-full rounded-full bg-ember px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-ember-dark"
-                >
-                  Request my trial
-                </button>
-                <p className="mt-3 text-xs text-sand/60">
-                  We will confirm availability within one business day.
-                </p>
-              </div>
-            </form>
-          )}
+        <p className="text-xs uppercase tracking-[0.4em] text-ember">
+          DeadGame
+        </p>
+        <h3 className="mt-4 text-3xl font-display uppercase tracking-wide text-white">
+          Loading
+        </h3>
+        <div className="mt-6 flex items-center justify-center gap-3">
+          <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-ember" />
+          <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-ember [animation-delay:150ms]" />
+          <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-ember [animation-delay:300ms]" />
         </div>
+        <p className="mt-5 text-xs uppercase tracking-[0.3em] text-sand/60">
+          Redirecting
+        </p>
       </div>
     </div>
   );
