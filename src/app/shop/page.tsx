@@ -19,7 +19,7 @@ export default function ShopPage() {
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-black transition hover:bg-white/90"
+              className="rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] !text-black transition hover:bg-white/90"
             >
               Contact the gym
             </Link>
