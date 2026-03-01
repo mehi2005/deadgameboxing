@@ -187,12 +187,12 @@ export function ScheduleFilter({
             return (
               <div
                 key={program}
-                className="flex w-full items-center justify-between rounded-2xl border border-ink/15 bg-fog-soft/45 px-4 py-3 text-sm text-sand/80"
+                className="flex w-full min-w-0 items-center justify-between rounded-2xl border border-ink/15 bg-fog-soft/45 px-4 py-3 text-sm text-sand/80"
               >
-                <div className="flex items-center gap-3 pr-3">
+                <div className="flex min-w-0 items-center gap-3 pr-3">
                   <span className={`h-4 w-4 rounded-sm border ${style.swatch}`} />
                   <div>
-                    <p>{program}</p>
+                    <p className="break-words">{program}</p>
                     <p className="mt-0.5 text-[11px] uppercase tracking-[0.16em] text-sand/55">
                       {coaches}
                     </p>

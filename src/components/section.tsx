@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+
 type SectionProps = {
   id?: string;
   eyebrow?: string;
@@ -47,7 +48,7 @@ export function Section({
           ) : null}
           <div className="flex flex-col gap-4">
             <h2
-              className={`max-w-4xl text-5xl font-display uppercase tracking-wide text-ink sm:text-6xl ${
+              className={`max-w-4xl wrap-break-word text-5xl font-display uppercase tracking-wide text-ink leading-tight sm:text-6xl ${
                 titleClassName ?? ""
               }`.trim()}
             >
@@ -55,7 +56,7 @@ export function Section({
             </h2>
             {description ? (
               <p
-                className={`max-w-3xl text-base leading-relaxed text-sand/78 sm:text-lg ${
+                className={`max-w-3xl wrap-break-word text-base leading-relaxed text-sand/78 sm:text-lg ${
                   descriptionClassName ?? ""
                 }`.trim()}
               >

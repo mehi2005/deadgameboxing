@@ -58,7 +58,7 @@ export function ProgramsGrid({
       }`.trim()}
     >
       {columned.map((column, columnIndex) => (
-        <div key={columnIndex} className="flex flex-col gap-6">
+        <div key={columnIndex} className="flex min-w-0 flex-col gap-6">
           {column.map((item) => (
             <ScrollReveal
               key={item.program.slug}

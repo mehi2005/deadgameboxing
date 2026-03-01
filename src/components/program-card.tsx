@@ -9,7 +9,7 @@ export function ProgramCard({ program }: { program: Program }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="surface-card hover-lift flex flex-col rounded-3xl p-6">
+    <div className="surface-card hover-lift flex min-w-0 flex-col rounded-3xl p-6">
       <div className="flex items-center justify-between">
         <div>
           {program.level ? (
@@ -17,9 +17,9 @@ export function ProgramCard({ program }: { program: Program }) {
               {program.level}
             </p>
           ) : null}
-          <h3 className="mt-2 text-3xl font-display uppercase tracking-wide text-sand">
-            {program.title}
-          </h3>
+          <h3 className="mt-2 break-words text-3xl font-display uppercase tracking-wide text-sand leading-tight">
+            {program.title}
+          </h3>
         </div>
       </div>
       {program.duration || program.intensity ? (
