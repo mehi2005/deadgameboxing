@@ -9,7 +9,7 @@ export function ProgramCard({ program }: { program: Program }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="surface-card hover-lift flex min-h-[360px] flex-col rounded-3xl p-6 md:min-h-[420px]">
+    <div className="surface-card hover-lift flex flex-col rounded-3xl p-6">
       <div className="flex items-center justify-between">
         <div>
           {program.level ? (
