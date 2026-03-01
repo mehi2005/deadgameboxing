@@ -110,6 +110,10 @@ textarea {
     0 18px 36px rgba(0, 0, 0, 0.45);
 }
 
+.text-ember {
+  color: var(--ember) !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .animate-fade-up {
     animation: fade-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;

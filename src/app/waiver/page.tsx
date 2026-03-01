@@ -8,7 +8,7 @@ export default function WaiverPage() {
       <section className="border-b border-ink/10 bg-fog/80 py-20">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6">
-            <p className="text-xs uppercase tracking-[0.35em] text-ember/90">
+            <p className="text-xs uppercase tracking-[0.35em] text-ember">
               Waiver
             </p>
             <h1 className="text-5xl font-display uppercase tracking-wide text-ink">
@@ -20,7 +20,7 @@ export default function WaiverPage() {
             </p>
           </div>
           <div className="rounded-3xl border border-ink/10 bg-fog/80 p-8 text-sm text-sand/70">
-            <p className="text-xs uppercase tracking-[0.35em] text-ember/80">
+            <p className="text-xs uppercase tracking-[0.35em] text-ember">
               Texas, United States
             </p>
             <p className="mt-3">
@@ -44,7 +44,7 @@ export default function WaiverPage() {
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div className="rounded-3xl border border-ink/10 bg-fog/80 p-8 text-sm text-sand/70">
             <div className="grid gap-4">
-              <p className="text-xs uppercase tracking-[0.35em] text-ember/80">
+              <p className="text-xs uppercase tracking-[0.35em] text-ember">
                 Assumption of Risk
               </p>
               <p>
@@ -61,7 +61,7 @@ export default function WaiverPage() {
                 Dead Game Boxing or its owners, coaches, employees, volunteers,
                 or agents.
               </p>
-              <p className="text-xs uppercase tracking-[0.35em] text-ember/80">
+              <p className="text-xs uppercase tracking-[0.35em] text-ember">
                 Release of Liability
               </p>
               <p>
@@ -73,7 +73,7 @@ export default function WaiverPage() {
                 disability, death, or property damage related to participation
                 or presence at the facility.
               </p>
-              <p className="text-xs uppercase tracking-[0.35em] text-ember/80">
+              <p className="text-xs uppercase tracking-[0.35em] text-ember">
                 Indemnification
               </p>
               <p>
@@ -81,7 +81,7 @@ export default function WaiverPage() {
                 claims, liabilities, damages, or costs (including reasonable
                 attorneys&apos; fees) arising out of my participation or actions.
               </p>
-              <p className="text-xs uppercase tracking-[0.35em] text-ember/80">
+              <p className="text-xs uppercase tracking-[0.35em] text-ember">
                 Medical Authorization
               </p>
               <p>
@@ -89,7 +89,7 @@ export default function WaiverPage() {
                 Dead Game Boxing to obtain emergency medical treatment if needed
                 and agree to be financially responsible for any medical costs.
               </p>
-              <p className="text-xs uppercase tracking-[0.35em] text-ember/80">
+              <p className="text-xs uppercase tracking-[0.35em] text-ember">
                 Rules &amp; Conduct
               </p>
               <p>
@@ -98,14 +98,14 @@ export default function WaiverPage() {
                 I fail to follow safety guidelines or behave in a manner that
                 endangers myself or others.
               </p>
-              <p className="text-xs uppercase tracking-[0.35em] text-ember/80">
+              <p className="text-xs uppercase tracking-[0.35em] text-ember">
                 Photo &amp; Video Release
               </p>
               <p>
                 I grant permission to Dead Game Boxing to use photos or videos
                 of me for promotional purposes without compensation.
               </p>
-              <p className="text-xs uppercase tracking-[0.35em] text-ember/80">
+              <p className="text-xs uppercase tracking-[0.35em] text-ember">
                 Governing Law
               </p>
               <p>
@@ -113,7 +113,7 @@ export default function WaiverPage() {
                 dispute arising from this waiver shall be brought in the courts
                 located in Travis County, Texas.
               </p>
-              <p className="text-xs uppercase tracking-[0.35em] text-ember/80">
+              <p className="text-xs uppercase tracking-[0.35em] text-ember">
                 Electronic Signature
               </p>
               <p>
@@ -131,3 +131,4 @@ export default function WaiverPage() {
     </>
   );
 }
+
