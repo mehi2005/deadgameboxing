@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/section";
 import { blogPosts } from "@/lib/data";
 
@@ -32,8 +31,6 @@ export default function BlogPage() {
           ))}
         </div>
       </Section>
-
-      <CTASection />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CTASection } from "@/components/cta-section";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { ScheduleFilter } from "@/components/schedule-filter";
 import { Section } from "@/components/section";
@@ -58,7 +57,6 @@ export default function SchedulePage() {
           </div>
         </div>
       </Section>
-      <CTASection />
     </>
   );
 }

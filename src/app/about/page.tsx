@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { CoachCard } from "@/components/coach-card";
-import { CTASection } from "@/components/cta-section";
 import { RotatingImage } from "@/components/rotating-image";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Section } from "@/components/section";
@@ -10,7 +9,7 @@ import { coaches } from "@/lib/data";
 export default function AboutPage() {
   return (
     <>
-      <section className="border-b border-ink/10 bg-fog-soft/55 py-24">
+      <section className="border-b border-ink/10 py-24">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6">
             <p className="text-xs uppercase tracking-[0.35em] text-ember">
@@ -104,7 +103,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <section className="border-y border-ink/10 bg-fog-soft/55 py-24 sm:py-28">
+      <section className="border-y border-ink/10 py-24 sm:py-28">
         <div className="mx-auto w-full max-w-[1440px] px-0">
           <div className="flex flex-col gap-5">
             <span className="text-xs uppercase tracking-[0.4em] text-ember/90">
@@ -127,8 +126,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <CTASection />
     </>
   );
 }

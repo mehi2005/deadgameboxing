@@ -192,7 +192,7 @@ export function ScheduleFilter({
                 <div className="flex min-w-0 items-center gap-3 pr-3">
                   <span className={`h-4 w-4 rounded-sm border ${style.swatch}`} />
                   <div>
-                    <p className="break-words">{program}</p>
+                    <p className="wrap-break-word">{program}</p>
                     <p className="mt-0.5 text-[11px] uppercase tracking-[0.16em] text-sand/55">
                       {coaches}
                     </p>
@@ -231,12 +231,12 @@ export function ScheduleFilter({
                     return (
                       <td
                         key={`${day}-${time}`}
-                        className="min-w-[124px] border-b border-l border-ink/10 p-0"
+                        className="min-w-31 border-b border-l border-ink/10 p-0"
                       >
                         {slotItems.length === 0 ? (
-                          <div className="min-h-[96px] bg-fog-soft/20" />
+                          <div className="min-h-24 bg-fog-soft/20" />
                         ) : (
-                          <div className="flex min-h-[96px] flex-col">
+                          <div className="flex min-h-24 flex-col">
                             {slotItems.map((entry, index) => {
                               const style = programStyleMap.get(entry.program) ?? FALLBACK_STYLE;
                               const durationMinutes = entry.durationMinutes ?? 60;

@@ -56,10 +56,10 @@ export function ProgramCard({ program }: { program: Program }) {
       ) : null}
       <div className="mt-auto pt-8">
         <a
-          href="https://app.glofox.com/portal/#/branch/655bc43c75c5896148078ec1/memberships"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-sand/70 transition hover:text-ember hover:!text-ember"
+          href="https://app.glofox.com/portal/#/branch/655bc43c75c5896148078ec1/memberships"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-sand/70 transition hover:text-ember hover:!text-ember"
         >
           Book
         </a>
