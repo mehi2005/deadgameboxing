@@ -20,7 +20,7 @@ export default function Home() {
           eyebrow="Programs"
           title="Train With Purpose"
           description="Choose a program that matches your goals and level. Our coaches tailor every session for progress."
-          className="bg-neutral-800 !pt-8 sm:!pt-10"
+          className="bg-neutral-800 pt-8! sm:pt-10!"
           contentClassName="relative z-10"
           eyebrowClassName="!text-white/70"
           titleClassName="!text-white"
@@ -29,7 +29,7 @@ export default function Home() {
           <div className="-mt-12 mb-6">
             <Link
               href="/programs"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] !text-black transition hover:bg-white/90"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-black! transition hover:bg-white/90"
             >
               <span>Programs</span>
               <svg
