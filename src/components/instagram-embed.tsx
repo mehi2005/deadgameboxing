@@ -20,7 +20,7 @@ export function InstagramEmbed({
   }, [permalink]);
 
   return (
-    <div className="mx-auto w-full max-w-[540px]">
+    <div className="mx-auto w-full max-w-135">
       <blockquote
         className="instagram-media"
         data-instgrm-captioned={captioned}
