@@ -10,7 +10,7 @@ export default function ContactPage() {
       <Section
         eyebrow="Contact"
         title="Talk With Our Coaches"
-        description="Send us a note, ask about a program, or book a free trial session."
+        description="Send us a note, ask about a program, or book a trial session."
       >
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="grid">

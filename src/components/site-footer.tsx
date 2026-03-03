@@ -21,7 +21,7 @@ export function SiteFooter() {
               a structured team environment.
             </p>
             <BookTrialButton
-              label="BOOK A FREE TRIAL"
+              label="BOOK TRIAL"
               className="w-fit rounded-full bg-fog px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-fog/90"
             />
           </div>
@@ -71,9 +71,25 @@ export function SiteFooter() {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="transition hover:text-fog"
+                  className="flex items-center gap-2 transition hover:text-fog"
                 >
-                  {social.label}
+                  {social.label === "Instagram" ? (
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <path d="M16.5 7.5h.01" />
+                      <circle cx="12" cy="12" r="4" />
+                    </svg>
+                  ) : null}
+                  <span>{social.label}</span>
                 </a>
               ))}
             </div>

@@ -136,7 +136,7 @@ export function SiteNav() {
               }}
               className="w-full rounded-full bg-[#d9d9d9] px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-black transition hover:bg-[#bfbfbf]"
             >
-              Book a Free Trial
+              Book Trial
             </button>
           </div>
         </div>

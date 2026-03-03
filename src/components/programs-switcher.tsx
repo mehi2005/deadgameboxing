@@ -156,6 +156,17 @@ export function ProgramsSwitcher({ items = allPrograms }: { items?: Program[] })
             />
           </div>
         ) : null}
+        {activeProgram.slug === "storm-fitness" ? (
+          <div className="relative mt-4 h-104 w-full overflow-hidden rounded-2xl border border-ink/10 md:h-128">
+            <Image
+              src="/images/stormfitness.jpg"
+              alt="Storm Fitness strength and conditioning"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover"
+            />
+          </div>
+        ) : null}
         <a
           href="https://app.glofox.com/portal/#/branch/655bc43c75c5896148078ec1/memberships"
           target="_blank"

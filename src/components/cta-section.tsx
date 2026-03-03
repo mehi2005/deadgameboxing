@@ -23,7 +23,7 @@ export function CTASection() {
             Start Your First Round With Us
           </h3>
           <p className="relative z-10 mx-auto mt-4 max-w-2xl text-sm text-white/82">
-            Book a free trial session and get a personalized training plan from
+            Book a trial session and get a personalized training plan from
             our coaching staff.
           </p>
           <div className="relative z-10 mt-8 flex justify-center">
