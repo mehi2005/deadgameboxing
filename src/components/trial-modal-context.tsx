@@ -80,7 +80,7 @@ export function useTrialModal() {
 
 export function BookTrialButton({
   className,
-  label = "Book a Free Trial",
+  label = "Book Trial",
 }: {
   className?: string;
   label?: string;

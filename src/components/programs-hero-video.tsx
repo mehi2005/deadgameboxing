@@ -28,7 +28,7 @@ export function ProgramsHeroVideo() {
     <>
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-contain"
         autoPlay
         loop
         muted={isMuted}

@@ -7,7 +7,7 @@ export default function ProgramsPage() {
   return (
     <>
       <section className="border-b border-ink/10 bg-white/95 py-16">
-        <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
           <div className="flex flex-col gap-6">
             <p className="text-xs uppercase tracking-[0.35em] text-fog">
               Programs
@@ -38,4 +38,3 @@ export default function ProgramsPage() {
     </>
   );
 }
-

@@ -1,13 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/cta-section";
 import { FacilityPhotoGrid } from "@/components/facility-photo-grid";
 import { FAQPhoto } from "@/components/faq-photo";
 import { Hero } from "@/components/hero";
 import { InstagramEmbed } from "@/components/instagram-embed";
-import { ScrollAutoplayVideo } from "@/components/scroll-autoplay-video";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Section } from "@/components/section";
+import { TrainWithPurposeMedia } from "@/components/train-with-purpose-media";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { faqs, testimonials } from "@/lib/data";
 
@@ -16,11 +15,16 @@ export default function Home() {
     <>
       <Hero />
 
-      <ScrollReveal from="fade" threshold={0.14}>
+      <ScrollReveal from="none">
         <Section
           eyebrow="Programs"
           title="Train With Purpose"
           description="Choose a program that matches your goals and level. Our coaches tailor every session for progress."
+          className="bg-neutral-800 !pt-8 sm:!pt-10"
+          contentClassName="relative z-10"
+          eyebrowClassName="!text-white/70"
+          titleClassName="!text-white"
+          descriptionClassName="!text-white/80"
         >
           <div className="-mt-12 mb-6">
             <Link
@@ -46,25 +50,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
-            <div className="relative h-[520px] w-full max-w-[360px] place-self-start overflow-hidden rounded-md border border-ink/10 bg-white shadow-lg lg:h-[624px] lg:max-w-[432px]">
-              <Image
-                src="/images/dg-flyer-march.jpg"
-                alt="Dead Game Boxing flyer"
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-contain p-4"
-              />
-            </div>
-
-            <div className="relative h-[520px] w-full max-w-[760px] place-self-start overflow-hidden rounded-md border border-ink/10 bg-black lg:h-[624px] lg:max-w-none">
-              <ScrollAutoplayVideo
-                src="/videos/sequence-02.MOV"
-                poster="/images/dg-coach-talk.jpg"
-                className="h-full w-full object-contain"
-              />
-            </div>
-          </div>
+          <TrainWithPurposeMedia />
         </Section>
       </ScrollReveal>
 
@@ -79,10 +65,8 @@ export default function Home() {
           <div className="grid gap-3 text-sm text-sand/70">
               <div className="grid gap-2 sm:grid-cols-2">
                 {[
-                  "Two full-size rings",
-                  "Conditioning turf lane",
-                  "Recovery + mobility zone",
-                  "Retail shop and wraps",
+                  "One full-size ring",
+                  "Weights section for strength + conditioning",
                 ].map((item) => (
                   <div
                     key={item}

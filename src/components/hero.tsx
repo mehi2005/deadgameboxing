@@ -39,6 +39,9 @@ export function Hero() {
               View Schedule
             </Link>
           </div>
+          <p className="text-sm text-white/70">
+            Drop-ins are $15 until you choose a membership.
+          </p>
 
           <div className="grid gap-4 sm:grid-cols-3">
             {[

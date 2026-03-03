@@ -63,7 +63,7 @@ export function ScrollAutoplayVideo({
   };
 
   return (
-    <div className="group relative h-full w-full">
+    <div className="group relative h-full w-fit max-w-full">
       <video
         ref={videoRef}
         src={src}
@@ -77,10 +77,34 @@ export function ScrollAutoplayVideo({
       <button
         type="button"
         aria-label={isMuted ? "Unmute video" : "Mute video"}
+        aria-pressed={!isMuted}
         onClick={toggleMuted}
-        className="absolute right-3 top-3 z-10 rounded-full border border-white/30 bg-black/65 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white opacity-100 transition sm:opacity-0 sm:group-hover:opacity-100 sm:focus:opacity-100"
+        className="absolute right-3 top-3 z-10 grid h-9 w-9 place-items-center rounded-full border border-white/30 bg-black/65 text-white opacity-100 transition sm:opacity-0 sm:group-hover:opacity-100 sm:focus:opacity-100"
       >
-        {isMuted ? "Unmute" : "Mute"}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-4 w-4"
+        >
+          {isMuted ? (
+            <>
+              <path d="M11 5l-5 4H3v6h3l5 4V5z" />
+              <path d="M23 9l-6 6" />
+              <path d="M17 9l6 6" />
+            </>
+          ) : (
+            <>
+              <path d="M11 5l-5 4H3v6h3l5 4V5z" />
+              <path d="M15.5 8.5a5 5 0 010 7" />
+              <path d="M18.5 5.5a9 9 0 010 13" />
+            </>
+          )}
+        </svg>
       </button>
     </div>
   );

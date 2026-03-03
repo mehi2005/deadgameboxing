@@ -9,8 +9,6 @@ export const siteInfo = {
   ],
   socials: [
     { label: "Instagram", href: "https://www.instagram.com/dead_game_boxing/" },
-    { label: "YouTube", href: "#" },
-    { label: "TikTok", href: "#" },
   ],
 };
 
@@ -20,7 +18,6 @@ export const navLinks = [
   { label: "Programs", href: "/programs" },
   { label: "Schedule", href: "/schedule" },
   { label: "Contact", href: "/contact" },
-  { label: "Shop", href: "/shop" },
 ];
 
 export const programs = [
@@ -43,7 +40,7 @@ export const programs = [
     intensity: "",
     image: "/images/program-fundamentals.svg",
     description:
-      "Once you've used your 1-day trial for a free workout the day pass is 15$ until you decide on a membership.",
+      "Drop-ins start at $15 per visit until you choose a membership.",
     details: [],
   },
   {
@@ -169,7 +166,7 @@ export const coaches = [
   {
     name: "Jacob Acuna",
     role: "Assistant Boxing Coach",
-    image: "/images/JACOB.jpg",
+    image: "/images/jacobpic.jpg",
     bio: "Jacob Acuna is an assistant boxing coach for the competition team who brings real amateur ring experience from novice through open-class divisions. He is also a certified strength and conditioning coach with more than 10 years of strength-training experience. His coaching combines boxing mechanics, athletic development, and sustainable habits for athletes and everyday clients.",
     longBio: [
       "Jacob Acuna is an assistant boxing coach for the Dead Game Boxing competition team, working under Coach Ricco and alongside Coach Gabe in the youth program. He competed as an amateur boxer from the novice ranks through the open-class division, bringing real ring experience to every athlete he trains.",
@@ -181,7 +178,7 @@ export const coaches = [
   {
     name: "Ricco Spencer",
     role: "Head Boxing Coach",
-    image: "/images/RICCO.jpg",
+    image: "/images/riccopic.jpg",
     bio: "Coach Ricco is the head boxing coach and a former amateur state champion with over 15 years in USA Boxing. He has coached athletes from their first bout to advanced competitors with 70+ fights while traveling nationwide to major tournaments. His approach emphasizes fundamentals, disciplined technique, and confidence-building so athletes perform at their best in and out of the ring.",
     longBio: [
       "Coach Ricco is the head boxing coach of the gym, bringing real ring experience as a former amateur state champion with over 15 years in USA Boxing. He has coached athletes from their very first fight all the way to seasoned competitors with 70+ bouts, traveling across the United States to national tournaments and bringing home multiple championship belts. His experience also extends into the professional ranks, having traveled the country to corner and support pro fighters.",
@@ -381,7 +378,7 @@ export const faqs = [
   {
     question: "How do I book a trial?",
     answer:
-      "Use the Book a Free Trial button and we will confirm your first session by email.",
+      "Use the Book Trial button and we will confirm your first session by email.",
   },
 ];
 

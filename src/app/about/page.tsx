@@ -37,7 +37,7 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-wrap gap-4">
               <BookTrialButton
-                label="Book a Free Trial"
+                label="Book Trial"
                 className="rounded-full bg-ember px-8 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-ember-dark"
               />
             </div>
