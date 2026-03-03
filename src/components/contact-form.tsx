@@ -4,6 +4,8 @@ import { useState } from "react";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (submitted) {
     return (
@@ -31,9 +33,45 @@ export function ContactForm() {
   return (
     <form
       className="surface-card grid gap-5 rounded-3xl p-8"
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
-        setSubmitted(true);
+
+        setError(null);
+        setIsSubmitting(true);
+
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+        const payload = {
+          name: String(formData.get("name") ?? ""),
+          email: String(formData.get("email") ?? ""),
+          phone: String(formData.get("phone") ?? ""),
+          message: String(formData.get("message") ?? ""),
+        };
+
+        try {
+          const response = await fetch(
+            "https://formsubmit.co/ajax/deadgamebox@gmail.com",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify(payload),
+            },
+          );
+
+          if (!response.ok) {
+            throw new Error("Send failed");
+          }
+
+          form.reset();
+          setSubmitted(true);
+        } catch {
+          setError("Could not send your message right now. Please try again.");
+        } finally {
+          setIsSubmitting(false);
+        }
       }}
     >
       <div className="grid gap-5 md:grid-cols-2">
@@ -85,10 +123,12 @@ export function ContactForm() {
       </div>
       <button
         type="submit"
+        disabled={isSubmitting}
         className="rounded-full bg-ember px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-black transition hover:bg-ember-dark"
       >
-        Send message
+        {isSubmitting ? "Sending..." : "Send message"}
       </button>
+      {error ? <p className="text-sm text-red-400">{error}</p> : null}
     </form>
   );
 }
