@@ -166,7 +166,7 @@ export const coaches = [
   {
     name: "Jacob Acuna",
     role: "Assistant Boxing Coach",
-    image: "/images/jacobpic.jpg",
+    image: "/images/jacobpic.JPG",
     bio: "Jacob Acuna is an assistant boxing coach for the competition team who brings real amateur ring experience from novice through open-class divisions. He is also a certified strength and conditioning coach with more than 10 years of strength-training experience. His coaching combines boxing mechanics, athletic development, and sustainable habits for athletes and everyday clients.",
     longBio: [
       "Jacob Acuna is an assistant boxing coach for the Dead Game Boxing competition team, working under Coach Ricco and alongside Coach Gabe in the youth program. He competed as an amateur boxer from the novice ranks through the open-class division, bringing real ring experience to every athlete he trains.",
@@ -178,7 +178,7 @@ export const coaches = [
   {
     name: "Ricco Spencer",
     role: "Head Boxing Coach",
-    image: "/images/riccopic.jpg",
+    image: "/images/riccopic.JPG",
     bio: "Coach Ricco is the head boxing coach and a former amateur state champion with over 15 years in USA Boxing. He has coached athletes from their first bout to advanced competitors with 70+ fights while traveling nationwide to major tournaments. His approach emphasizes fundamentals, disciplined technique, and confidence-building so athletes perform at their best in and out of the ring.",
     longBio: [
       "Coach Ricco is the head boxing coach of the gym, bringing real ring experience as a former amateur state champion with over 15 years in USA Boxing. He has coached athletes from their very first fight all the way to seasoned competitors with 70+ bouts, traveling across the United States to national tournaments and bringing home multiple championship belts. His experience also extends into the professional ranks, having traveled the country to corner and support pro fighters.",

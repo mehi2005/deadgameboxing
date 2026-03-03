@@ -159,7 +159,7 @@ export function ProgramsSwitcher({ items = allPrograms }: { items?: Program[] })
         {activeProgram.slug === "storm-fitness" ? (
           <div className="relative mt-4 h-104 w-full overflow-hidden rounded-2xl border border-ink/10 md:h-128">
             <Image
-              src="/images/stormfitness.jpg"
+              src="/images/stormfitness.JPG"
               alt="Storm Fitness strength and conditioning"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
