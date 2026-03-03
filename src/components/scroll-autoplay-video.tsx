@@ -63,7 +63,7 @@ export function ScrollAutoplayVideo({
   };
 
   return (
-    <div className="group relative h-full w-fit max-w-full">
+    <div className="group relative h-full w-full max-w-full overflow-hidden">
       <video
         ref={videoRef}
         src={src}
@@ -72,7 +72,7 @@ export function ScrollAutoplayVideo({
         loop
         playsInline
         preload="metadata"
-        className={className}
+        className={`absolute inset-0 h-full w-full ${className ?? ""}`.trim()}
       />
       <button
         type="button"

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
-import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/section";
 import { siteInfo } from "@/lib/data";
 
@@ -56,8 +55,6 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </Section>
-
-      <CTASection />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/section";
 import { blogPosts } from "@/lib/data";
 
@@ -39,8 +38,6 @@ export default function BlogPostPage({ params }: PageProps) {
           </Link>
         </div>
       </Section>
-
-      <CTASection />
     </>
   );
 }

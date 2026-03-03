@@ -1,11 +1,10 @@
-import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/section";
 import { WaiverForm } from "@/components/waiver-form";
 
 export default function WaiverPage() {
   return (
     <>
-      <section className="border-b border-ink/10 bg-fog/80 py-20">
+      <section className="border-b border-ink/10 py-20">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6">
             <p className="text-xs uppercase tracking-[0.35em] text-ember">
@@ -126,8 +125,6 @@ export default function WaiverPage() {
           <WaiverForm />
         </div>
       </Section>
-
-      <CTASection />
     </>
   );
 }

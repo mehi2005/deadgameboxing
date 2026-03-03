@@ -28,7 +28,6 @@ export function CoachCard({
   const [isOpen, setIsOpen] = useState(false);
   const fullDescription = coach.longBio?.join(" ") ?? coach.bio;
   const previewDescription = getFixedPreview(fullDescription, 220);
-  const showCoachPhoto = coach.name !== "Storm Cosby";
   const canUseDOM = typeof window !== "undefined";
   const isLight = variant === "light";
 
@@ -60,33 +59,21 @@ export function CoachCard({
             : "surface-card hover-lift rounded-3xl p-6"
         }
       >
-        {showCoachPhoto ? (
-          <div
-            className={
-              isLight
-                ? "relative h-64 w-full overflow-hidden rounded-2xl border border-black/10 bg-black/5"
-                : "relative h-64 w-full overflow-hidden rounded-2xl border border-ink/15 bg-fog-lift/70"
-            }
-          >
-            <Image
-              src={coach.image}
-              alt={coach.name}
-              fill
-              sizes="(max-width: 1024px) 100vw, 33vw"
-              className="object-cover object-center"
-            />
-          </div>
-        ) : (
-          <div
-            className={
-              isLight
-                ? "flex h-64 w-full items-center justify-center rounded-2xl border border-black/10 bg-black/5 text-xs uppercase tracking-[0.3em] text-black/45"
-                : "flex h-64 w-full items-center justify-center rounded-2xl border border-ink/15 bg-fog-lift/70 text-xs uppercase tracking-[0.3em] text-sand/55"
-            }
-          >
-            Photo Coming Soon
-          </div>
-        )}
+        <div
+          className={
+            isLight
+              ? "relative h-64 w-full overflow-hidden rounded-2xl border border-black/10 bg-black/5"
+              : "relative h-64 w-full overflow-hidden rounded-2xl border border-ink/15 bg-fog-lift/70"
+          }
+        >
+          <Image
+            src={coach.image}
+            alt={coach.name}
+            fill
+            sizes="(max-width: 1024px) 100vw, 33vw"
+            className="object-cover object-center"
+          />
+        </div>
 
         <div className="mt-5">
           <h3
@@ -193,27 +180,23 @@ export function CoachCard({
             </div>
 
             <div
-              className={`mt-5 grid gap-6 sm:items-start ${
-                showCoachPhoto ? "sm:grid-cols-[220px_1fr]" : "sm:grid-cols-1"
-              }`}
+              className="mt-5 grid gap-6 sm:grid-cols-[220px_1fr] sm:items-start"
             >
-              {showCoachPhoto ? (
-                <div
-                  className={`relative h-56 overflow-hidden rounded-2xl sm:h-72 ${
-                    isLight
-                      ? "border border-black/10 bg-black/5"
-                      : "border border-ink/15 bg-fog-lift/70"
-                  }`}
-                >
-                  <Image
-                    src={coach.image}
-                    alt={coach.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 280px"
-                    className="object-cover"
-                  />
-                </div>
-              ) : null}
+              <div
+                className={`relative h-56 overflow-hidden rounded-2xl sm:h-72 ${
+                  isLight
+                    ? "border border-black/10 bg-black/5"
+                    : "border border-ink/15 bg-fog-lift/70"
+                }`}
+              >
+                <Image
+                  src={coach.image}
+                  alt={coach.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 280px"
+                  className="object-cover"
+                />
+              </div>
               <div
                 className={`grid max-h-[55vh] gap-4 overflow-y-auto pr-1 text-sm leading-relaxed ${
                   isLight ? "text-black/75" : "text-sand/76"

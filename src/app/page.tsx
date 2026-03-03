@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { CTASection } from "@/components/cta-section";
 import { FacilityPhotoGrid } from "@/components/facility-photo-grid";
 import { FAQPhoto } from "@/components/faq-photo";
 import { Hero } from "@/components/hero";
@@ -20,16 +19,16 @@ export default function Home() {
           eyebrow="Programs"
           title="Train With Purpose"
           description="Choose a program that matches your goals and level. Our coaches tailor every session for progress."
-          className="bg-neutral-800 pt-8! sm:pt-10!"
+          className="border-y border-black/10 pt-8! sm:pt-10!"
           contentClassName="relative z-10"
-          eyebrowClassName="!text-white/70"
+          eyebrowClassName="!text-white/65"
           titleClassName="!text-white"
-          descriptionClassName="!text-white/80"
+          descriptionClassName="!text-white/70"
         >
           <div className="-mt-12 mb-6">
             <Link
               href="/programs"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-black! transition hover:bg-white/90"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-black! transition hover:bg-white/90"
             >
               <span>Programs</span>
               <svg
@@ -59,7 +58,6 @@ export default function Home() {
           eyebrow="Facility"
           title="Built For Real Fighters"
           description="A focused space with dedicated ring time, conditioning zones, and recovery amenities."
-          className="bg-fog/80"
         >
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div className="grid gap-3 text-sm text-sand/70">
@@ -114,7 +112,6 @@ export default function Home() {
           eyebrow="FAQ"
           title="Questions, Answered"
           description="Everything you need before stepping into your first class."
-          className="bg-fog/80"
         >
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <FAQPhoto />
@@ -135,9 +132,6 @@ export default function Home() {
         </Section>
       </ScrollReveal>
 
-      <ScrollReveal from="fade" threshold={0.14}>
-        <CTASection />
-      </ScrollReveal>
     </>
   );
 }

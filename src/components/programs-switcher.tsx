@@ -170,7 +170,7 @@ export function ProgramsSwitcher({ items = allPrograms }: { items?: Program[] })
         <a
           href="https://app.glofox.com/portal/#/branch/655bc43c75c5896148078ec1/memberships"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="mt-2 inline-flex w-fit items-center justify-center rounded-full bg-fog px-7 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-white transition hover:bg-fog/90"
         >
           Book

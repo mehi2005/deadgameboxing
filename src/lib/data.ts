@@ -173,7 +173,7 @@ export const coaches = [
       "Jacob is also a certified strength and conditioning coach with over 10 years of strength-training experience. His coaching blends proper boxing mechanics, athletic development, and sustainable lifestyle habits to help clients become the strongest version of themselves.",
       "Whether your goal is to compete in tournaments, build muscle, lose fat, or simply get into the best shape of your life, Jacob brings the same level of dedication he expects from his athletes. If you are willing to put in the work, he is committed to helping you achieve it.",
     ],
-    specialties: ["Footwork", "Timing", "Ring movement"],
+    specialties: ["Strength", "Explosiveness", "Fundamentals"],
   },
   {
     name: "Ricco Spencer",
@@ -185,19 +185,19 @@ export const coaches = [
       "Ricco is known for his commitment to strong fundamentals, disciplined technique, and extreme attention to detail. He refuses to let athletes cut corners, ensuring they develop sharp skills, real confidence, and the mindset required to perform at their best.",
       "At the core of his coaching philosophy is one simple truth: boxing should be fun. Ricco does not just build strong athletes - he builds strong people. His goal is to help every client develop the mental toughness and self-belief they need to attack life with the same intensity they bring to the ring.",
     ],
-    specialties: ["Storm Fitness", "Bag work", "Pace"],
+    specialties: ["Conditioning", "Comp Ready", "Fundamentals"],
   },
   {
     name: "Storm Cosby",
     role: "Coach",
-    image: "/images/coach-malik.svg",
+    image: "/images/stormfitness.JPG",
     bio: "Storm leads high-energy strength and conditioning sessions built for boxing performance. His training focuses on explosiveness, stamina, and recovery so athletes can handle harder rounds with better output. He pushes consistency and discipline so clients develop habits that carry into every class.",
     longBio: [
       "Storm leads high-energy strength and conditioning sessions built for boxing performance.",
       "His training focuses on explosiveness, stamina, and recovery so athletes can handle harder rounds with better output.",
       "He pushes consistency and discipline so clients develop habits that carry into every class.",
     ],
-    specialties: ["Strength", "Explosiveness", "Recovery"],
+    specialties: ["Fundamentals", "Conditioning"],
   },
 ];
 
@@ -368,7 +368,7 @@ export const faqs = [
   {
     question: "Is there a drop-in option?",
     answer:
-      "Yes. Drop-ins are available for $29 and apply toward any membership upgrade.",
+      "Yes. Drop-ins are $15 until a membership plan is decided.",
   },
   {
     question: "What ages do you train?",

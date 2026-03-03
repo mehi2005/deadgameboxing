@@ -1,4 +1,3 @@
-import { CTASection } from "@/components/cta-section";
 import { ProgramsHeroVideo } from "@/components/programs-hero-video";
 import { ProgramsSwitcher } from "@/components/programs-switcher";
 import { Section } from "@/components/section";
@@ -33,8 +32,6 @@ export default function ProgramsPage() {
       >
         <ProgramsSwitcher />
       </Section>
-
-      <CTASection />
     </>
   );
 }
