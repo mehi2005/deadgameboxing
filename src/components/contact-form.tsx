@@ -46,6 +46,8 @@ export function ContactForm() {
           email: String(formData.get("email") ?? ""),
           phone: String(formData.get("phone") ?? ""),
           message: String(formData.get("message") ?? ""),
+          _subject: "New contact form message - Dead Game Boxing",
+          _captcha: "false",
         };
 
         try {
@@ -61,14 +63,28 @@ export function ContactForm() {
             },
           );
 
-          if (!response.ok) {
-            throw new Error("Send failed");
+          const result = (await response.json().catch(() => null)) as
+            | { success?: boolean | string; message?: string }
+            | null;
+
+          const wasSuccessful =
+            result?.success === true || result?.success === "true";
+
+          if (!response.ok || !wasSuccessful) {
+            throw new Error(
+              result?.message ??
+                "Could not send your message right now. Please try again.",
+            );
           }
 
           form.reset();
           setSubmitted(true);
-        } catch {
-          setError("Could not send your message right now. Please try again.");
+        } catch (sendError) {
+          setError(
+            sendError instanceof Error
+              ? sendError.message
+              : "Could not send your message right now. Please try again.",
+          );
         } finally {
           setIsSubmitting(false);
         }
